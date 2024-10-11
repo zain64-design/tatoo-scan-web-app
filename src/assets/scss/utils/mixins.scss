@@ -1,0 +1,65 @@
+@use './fonts.scss' as *;
+@use './variables.scss' as *;
+
+@mixin xxlHeading($font-size, $text-transform, $line-height, $margin-bottom, $letter-spacing) {
+    font-family: $font-6;
+    font-size: $font-size;
+    text-transform: $text-transform;
+    line-height: $line-height;
+    color: $white-clr;
+    margin-bottom: $margin-bottom;
+    letter-spacing: $letter-spacing;
+}
+
+@mixin xlHeading($text-transform, $margin-bottom) {
+    font-family: $font-5;
+    font-size: clamp(24px, 4vw, 48px);
+    text-transform: $text-transform;
+    line-height: clamp(30px, 5vw, 52px);
+    color: $white-clr;
+    margin-bottom: $margin-bottom;
+}
+
+@mixin paraOne($margin, $text-transform) {
+    font-family: $font-4;
+    font-size: clamp(16px, 1.5vw, 18px);
+    line-height: clamp(22px, 2vw, 28px);
+    margin: $margin;
+    color: $lt-grey-clr;
+    text-transform: $text-transform;
+}
+
+@mixin paraTwo($margin, $text-transform) {
+    font-family: $font-4;
+    font-size: clamp(16px, 1.5vw, 18px);
+    line-height: clamp(22px, 3vw, 36px);
+    margin: $margin;
+    color: $lt-grey-clr;
+    text-transform: $text-transform;
+    letter-spacing: -0.1px;
+}
+
+@mixin buttonOne($height,$width,$font-family,$font-size,$margin) {
+    color: $white-clr;
+    height: $height;
+    width: $width;
+    font-family: $font-family;
+    font-size: $font-size;
+    text-transform: capitalize;
+    margin: $margin;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: $gradient-1;
+    background-size: 130%;
+    transition: all 0.5s ease-in-out;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+        background-position: center;
+        background-size: 500%;
+    }
+}

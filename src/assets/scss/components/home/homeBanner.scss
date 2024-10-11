@@ -1,0 +1,50 @@
+@use '../../utils' as *;
+
+.sec-home-banner {
+	position: relative;
+	z-index: 2;
+	padding-top: clamp(100px,16vw,190px);
+	padding-bottom: clamp(40px,5vw,90px);
+	overflow: visible;
+	.bg-elem {
+		position: relative;
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: -10%;
+			right: -30%;
+			z-index: -1;
+			width: 100%;
+			max-width: 600px;
+			height: 600px;
+			background: $radial-gradient-1;
+			filter: blur(200px);
+			opacity: 80%;
+		}
+	}
+	.desc {
+		h1 {
+			@include xxlHeading(clamp(24px,5vw,64px),capitalize,clamp(30px,6vw,72px),clamp(10px,2vw,25px),-1px);
+			span {
+				background: $gradient-2;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+		p {
+			@include paraOne(0 0 7px 0,capitalize)
+		}
+	}
+	.btn-flex {
+		margin: 30px 0 0 0;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		.links {
+			&:last-child {
+				margin-left: 18px;
+			}
+		}
+	}
+}
