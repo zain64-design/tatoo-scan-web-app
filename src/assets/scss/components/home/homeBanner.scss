@@ -1,10 +1,9 @@
 @use '../../utils' as *;
 
 .sec-home-banner {
-	position: relative;
 	z-index: 2;
 	padding-top: clamp(100px,16vw,190px);
-	padding-bottom: clamp(40px,5vw,90px);
+	// padding-bottom: clamp(40px,5vw,90px);
 	overflow: visible;
 	.bg-elem {
 		position: relative;
@@ -25,7 +24,7 @@
 	}
 	.desc {
 		h1 {
-			@include xxlHeading(clamp(24px,5vw,64px),capitalize,clamp(30px,6vw,72px),clamp(10px,2vw,25px),-1px);
+			@include xxlHeading(clamp(24px,6vw,64px),capitalize,clamp(30px,6vw,72px),clamp(10px,2vw,25px),-1px);
 			span {
 				background: $gradient-2;
 				-webkit-background-clip: text;
@@ -33,7 +32,7 @@
 			}
 		}
 		p {
-			@include paraOne(0 0 7px 0,capitalize)
+			@include paraOne($font-4,0 0 7px 0,$lt-grey-clr,capitalize)
 		}
 	}
 	.btn-flex {

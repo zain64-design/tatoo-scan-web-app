@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="footer-main">
         <Container>
           <Row className="justify-content-center">
-            <Col xs={12} sm={6} md={6} lg={6} xl={3} xxl={3}>
+            <Col xs={12} sm={12} md={4} lg={3} xl={3} xxl={3}>
               <div className="footer-about">
                 <Image src={logo} className='thumb' alt='footer logo' />
                 <Text as='p'>Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu

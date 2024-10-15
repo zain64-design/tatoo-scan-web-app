@@ -20,21 +20,60 @@
     margin-bottom: $margin-bottom;
 }
 
-@mixin paraOne($margin, $text-transform) {
-    font-family: $font-4;
+@mixin smHeading($text-transform, $margin-bottom) {
+    font-family: $font-5;
+    font-size: clamp(16px, 1vw, 18px);
+    text-transform: $text-transform;
+    line-height: normal;
+    color: $white-clr;
+    margin-bottom: $margin-bottom;
+}
+
+@mixin xsHeading($font-size,$line-height,$margin-bottom) {
+    font-family: $font-5;
+    font-size: $font-size;
+    text-transform: capitalize;
+    line-height: $line-height;
+    color: $white-clr;
+    margin-bottom: $margin-bottom;
+    letter-spacing: 0.1px;
+}
+
+@mixin rgHeading($font-size,$text-transform,$line-height,$margin-bottom) {
+    font-family: $font-3;
+    font-size: $font-size;
+    text-transform: $text-transform;
+    line-height: $line-height;
+    color: $white-clr;
+    margin-bottom: $margin-bottom;
+    letter-spacing: 0.2px;
+}
+
+@mixin paraOne($font-family,$margin,$color,$text-transform) {
+    font-family: $font-family;
     font-size: clamp(16px, 1.5vw, 18px);
-    line-height: clamp(22px, 2vw, 28px);
+    line-height: clamp(22px, 3vw, 28px);
     margin: $margin;
-    color: $lt-grey-clr;
+    color: $color;
     text-transform: $text-transform;
 }
 
 @mixin paraTwo($margin, $text-transform) {
     font-family: $font-4;
-    font-size: clamp(16px, 1.5vw, 18px);
-    line-height: clamp(22px, 3vw, 36px);
+    font-size: clamp(14px, 1.5vw, 18px);
+    line-height: clamp(24px, 3vw, 36px);
     margin: $margin;
     color: $lt-grey-clr;
+    text-transform: $text-transform;
+    letter-spacing: -0.1px;
+}
+
+@mixin paraThree($margin, $text-transform) {
+    font-family: $font-3;
+    font-size: clamp(14px, 1.5vw, 16px);
+    line-height: clamp(24px, 2vw, 28px);
+    margin: $margin;
+    color: $white-clr;
     text-transform: $text-transform;
     letter-spacing: -0.1px;
 }
