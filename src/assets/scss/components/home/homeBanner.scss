@@ -1,9 +1,9 @@
 @use '../../utils' as *;
 
 .sec-home-banner {
-	z-index: 2;
+	z-index: 10;
 	padding-top: clamp(100px,16vw,190px);
-	// padding-bottom: clamp(40px,5vw,90px);
+	padding-bottom: clamp(75px,5vw,152px);
 	overflow: visible;
 	.bg-elem {
 		position: relative;
@@ -11,15 +11,29 @@
 			content: '';
 			display: block;
 			position: absolute;
-			top: -10%;
-			right: -30%;
+			top: 0%;
+			right: -20%;
 			z-index: -1;
 			width: 100%;
-			max-width: 600px;
-			height: 600px;
-			background: $radial-gradient-1;
-			filter: blur(200px);
-			opacity: 80%;
+			max-width: 390px;
+			height: 390px;
+			background: $shadow-2;
+			border-radius: 50%;
+			filter: blur(250px);
+		}
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			bottom: 35%;
+			left: -16%;
+			z-index: -1;
+			width: 100%;
+			max-width: 220px;
+			height: 220px;
+			background: $prim-bg-2;
+			border-radius: 50%;
+			filter: blur(250px);
 		}
 	}
 	.desc {
@@ -36,7 +50,7 @@
 		}
 	}
 	.btn-flex {
-		margin: 30px 0 0 0;
+		margin: 37px 0 0 0;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;

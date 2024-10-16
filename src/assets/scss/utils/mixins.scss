@@ -102,3 +102,72 @@
         background-size: 500%;
     }
 }
+
+
+@mixin buttonTwo($height,$width,$font-size,$margin) {
+    color: $lt-grey-clr-4;
+    height: $height;
+    width: $width;
+    font-family: $font-7;
+    font-size: $font-size;
+    text-transform: capitalize;
+    margin: $margin;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $prim-clr;
+    background: $sec-bg-3;
+    transition: all 0.5s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+        background-position: center;
+        background-size: 500%;
+    }
+}
+
+@mixin innerBannerOne() {
+    position: relative;
+    overflow: hidden;
+    padding-top: clamp(100px, 15vw, 196px);
+    // padding-bottom: clamp(50px, 13vw, 165px);
+    height: clamp(277px,38vw,554px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+    &::before {
+        content: '';
+        position: absolute;
+        top:0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background: linear-gradient(90deg, $black-bg 55%, $black-bg-2 70%, $black-bg-3 100%);
+        background: linear-gradient(0deg, $black-bg 0%, $black-bg-4 50%, rgba(0,0,0,1) 100%);
+        z-index: -1;
+    }
+}
+
+@mixin bannerHead($margin-bottom) {
+    font-family: $font-6;
+    font-size: clamp(24px, 5vw, 64px);
+    text-transform: capitalize;
+    line-height: clamp(30px, 6vw, 72px);
+    color: $white-clr;
+    margin-bottom: $margin-bottom;
+    text-align: center;
+}
+
+@mixin ctLb($color,$margin-bottom) {
+    font-family: $font-7;
+    font-size: clamp(14px, 1.5vw, 17px);
+    text-transform: capitalize;
+    line-height: normal;
+    color: $color;
+    margin-bottom: $margin-bottom;
+}

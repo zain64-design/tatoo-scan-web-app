@@ -39,7 +39,7 @@ const FooterLinks = () => {
                 const titles = data;
                 const { title, links } = titles;
                 return (
-                    <Col key={index} xs={12} sm={6} md={6} lg={6} xl={2} xxl={2}>
+                    <Col key={index} xs={12} sm={6} md={6} lg={6} xl={2} xxl={2} className='ms-xl-4 ms-xxl-4'>
                         <div className="categ-main">
                             <Text as="h6">{title}</Text>
                             <ul>

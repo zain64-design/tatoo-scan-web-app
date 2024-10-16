@@ -1,8 +1,14 @@
 import React from 'react'
 
+import InnerBannerOne from '../components/InnerBanners/InnerBannerOne';
+import SecContact from '../components/Contact/SecContact';
+
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+    <InnerBannerOne title="Contact Us" backgroundImage="/images/contact/contact-bg.png"/>
+    <SecContact/>
+    </>
   )
 }
 

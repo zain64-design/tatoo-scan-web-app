@@ -7,6 +7,7 @@ import logo from '/images/logo-header.png'
 import '../../assets/scss/layout/header.scss'
 import useHandleScroll from '../../utils/hooks/useHandleScroll';
 import Links from './Links';
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Header = () => {
     const scrolled = useHandleScroll();
@@ -18,7 +19,9 @@ const Header = () => {
                         <NavLink className='navbar-brand' to="/">
                             <Image src={logo} className="logo" alt="logo" />
                         </NavLink>
-                        <Navbar.Toggle />
+                        <Navbar.Toggle>
+                            <RxHamburgerMenu />
+                        </Navbar.Toggle>
                         <Navbar.Collapse>
                             <Links/>
                         </Navbar.Collapse>

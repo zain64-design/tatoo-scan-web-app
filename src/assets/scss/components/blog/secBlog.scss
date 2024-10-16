@@ -1,0 +1,85 @@
+@use '../../utils' as *;
+
+.sec-blog {
+    .blog-card {
+        background: $sec-bg-2;
+        border: none;
+        border-radius: 16px;
+        padding: 16px;
+        .blog-img {
+            object-fit: cover;
+            object-position: center;
+            height: clamp(120px,18vw,222px);
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+            border-radius: 12px;
+        }
+        .desc {
+            h6 {
+                font-family: $font-11;
+                color: $white-clr;
+                font-size: clamp(14px, 2vw, 20px);
+                line-height: clamp(20px, 3vw, 30px);
+                letter-spacing: -0.6px;
+                margin-top: clamp(10px,2vw,20px);
+                margin-bottom: 10px;
+            }
+            .author-area {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 8px;
+                flex-wrap: wrap;
+                .auth-ico {
+                    height: 36px;
+                    width: 36px;
+                    object-fit: cover;
+                    object-position: center;
+                    border-radius: 50%;
+                }
+                span {
+                    font-family: $font-7;
+                    font-size: clamp(14px, 2vw, 20px);
+                    line-height: normal;
+                    color: $lt-grey-clr-4;
+                    text-transform: capitalize;
+                    display: inline-flex;
+                }
+            }
+            .btm-area {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 23px;
+                span {
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 4px;
+                    border-radius: 100px;
+                    border: 1px solid $sec-clr-2;
+                    background: $sec-bg-4;
+                    height: 43px;
+                    width: 80px;
+                    font-family: $font-12;
+                    color: $lt-grey-clr-4;
+                    .icon {
+                        height: 19px;
+                        width: auto;
+                        object-fit: contain;
+                        object-position: center;
+                    }
+                }
+                .read-btn {
+                    @include buttonTwo(clamp(40px,5vw,63px),clamp(180px,18vw,227px),clamp(16px, 1vw, 20px),0);
+                    svg {
+                        color: $prim-clr;
+                        font-size: clamp(16px,2vw,20px);
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+    }
+}

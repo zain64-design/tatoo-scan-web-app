@@ -1,0 +1,13 @@
+@use '../../utils' as *;
+
+.sec-inner-banner {
+    @include innerBannerOne();
+    .desc {
+        h6 {
+            @include bannerHead(0);
+        }
+        p {
+
+        }
+    }
+}

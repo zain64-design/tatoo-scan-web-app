@@ -21,9 +21,9 @@ const Footer = () => {
               </div>
             </Col>
             <Col xs={12} sm={8} md={8} lg={8} xl={8} xxl={8}>
-              <Row className="justify-content-evenly">
+              <Row className="justify-content-center justify-content-sm-between justify-content-md-between justify-content-lg-between justify-content-xl-end justify-content-xxl-end">
                 <FooterLinks/>
-                <Col xs={12} sm={6} md={6} lg={6} xl={2} xxl={3}>
+                <Col xs={12} sm={6} md={6} lg={6} xl={3} xxl={3} className='ms-xl-4 ms-xxl-4'>
                   <div className="support-area">
                     <Text as="h6">Contact Us</Text>
                     <ul>

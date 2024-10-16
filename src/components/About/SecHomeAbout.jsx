@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import Image from '../UI/Image';
-import aboutImage from '/images/home/about-img.png';
+import aboutImage from '/images/home/about-img2.png';
 import Text from '../UI/Text';
 import homeAbout from '../../utils/API/homeAbout.json'
 import '../../assets/scss/components/home/homeAbout.scss'
@@ -10,10 +10,12 @@ const SecHomeAbout = () => {
   return (
     <>
       <section className="sec-about">
-        <Container>
-          <Row className='justify-content-around align-items-end'>
+        <Container className='bg-elem'>
+          <Row className='justify-content-center align-items-end'>
             <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
-              <Image src={aboutImage} className="about-img" />
+              <div className="img-box">
+                <Image src={aboutImage} />
+              </div>
             </Col >
             <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
               <div className="desc">
