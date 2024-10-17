@@ -6,6 +6,7 @@ import Services from './pages/Services';
 import Blogs from './pages/Blogs';
 import Contact from './pages/Contact';
 import Layout from './components/Layout/Layout';
+import BlogDetails from './pages/BlogDetails';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/about-us" element={<About/>} />
           <Route exact path="/services" element={<Services/>} />
           <Route exact path="/blogs" element={<Blogs/>} />
+          <Route exact path="/blog-detail/:id" element={<BlogDetails/>} />
           <Route exact path="/contact" element={<Contact/>} />
         </Routes>
         </Layout>

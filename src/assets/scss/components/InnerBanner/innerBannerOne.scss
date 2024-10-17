@@ -3,8 +3,11 @@
 .sec-inner-banner {
     @include innerBannerOne();
     .desc {
-        h6 {
+        .banner-heading {
             @include bannerHead(0);
+        }
+        .blog-heading {
+            @include blogHead();
         }
         p {
 

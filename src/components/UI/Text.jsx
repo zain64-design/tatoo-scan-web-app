@@ -10,7 +10,7 @@ const Text = ({as: Tag = 'p', className='', children, ...props}) => {
 Text.propTypes = {
     as: PropTypes.elementType,
     className: PropTypes.string,
-    children: PropTypes.node.isRequired,
+    children: PropTypes.node,
   };
 
 export default Text

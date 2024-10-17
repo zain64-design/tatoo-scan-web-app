@@ -2,22 +2,22 @@ import React from 'react';
 import * as Yup from 'yup';
 import CustomForm from '../CustomForm/CustomForm';
 
-const ContactForm = () => {
+const CommentForm = () => {
 
     const fields = [
         {
-            label: 'Your Name',
+            label: 'Full Name',
             name: 'name',
             type: 'text',
             placeholder: 'Full Name',
-            colProps: { xs:12, sm:12, md:12, lg:12, xl:12, xxl:12 }
+            colProps: { xs:12, sm:12, md:12, lg:6, xl:6, xxl:6 }
         },
         {
             label: 'Email Address',
             name: 'email',
             type: 'email',
             placeholder: 'Email Address',
-            colProps: { xs:12, sm:12, md:12, lg:12, xl:12, xxl:12 }
+            colProps: { xs:12, sm:12, md:12, lg:6, xl:6, xxl:6 }
         },
         {
             label: 'Your Comment',
@@ -39,11 +39,11 @@ const ContactForm = () => {
         message: Yup.string().required('Message is required')
     });
 
-    return (
-        <>
-        <CustomForm fields={fields} onSubmit={onSubmit} validationSchema={validationSchema} buttonText='contact us'/>
-        </>
-    )
+  return (
+    <>
+    <CustomForm fields={fields} onSubmit={onSubmit} validationSchema={validationSchema} buttonText='comment'/>
+    </>
+  )
 }
 
-export default ContactForm
+export default CommentForm

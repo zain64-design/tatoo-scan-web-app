@@ -52,6 +52,11 @@
     src: url("/fonts/KumbhSans-Regular.ttf");
   }
 
+  @font-face {
+    font-family: "Inter-Bold";
+    src: url("/fonts/Inter-Bold.ttf");
+  }
+
 $font-1: "ClashDisplay-Extralight";
 $font-2: "ClashDisplay-Light";
 $font-3: "ClashDisplay-Regular";
@@ -64,3 +69,4 @@ $font-9: "Inter-Medium";
 $font-10: "Inter-Light";
 $font-11: "Inter-SemiBold";
 $font-12: "KumbhSans-Regular";
+$font-13: "Inter-Bold";

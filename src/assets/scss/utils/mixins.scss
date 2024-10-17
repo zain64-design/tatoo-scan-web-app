@@ -122,9 +122,31 @@
     border-radius: 12px;
     overflow: hidden;
     position: relative;
+    z-index: 1;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background: $gradient-1;
+        background-size: 130%;
+        transition: all 0.5s ease-in-out;
+        z-index: -1;
+        opacity: 0;
+    }
     &:hover {
-        background-position: center;
-        background-size: 500%;
+        color: $white-clr;
+        border-color: transparent;
+        svg {
+            color: $white-clr;
+        }
+        &::before {
+            opacity: 1;
+        }
     }
 }
 
@@ -161,6 +183,16 @@
     color: $white-clr;
     margin-bottom: $margin-bottom;
     text-align: center;
+}
+
+@mixin blogHead() {
+    font-family: $font-13;
+    font-size: clamp(24px, 5vw, 48px);
+    text-transform: capitalize;
+    line-height: clamp(30px, 6vw, 72px);
+    color: $white-clr;
+    margin-bottom: 20px;
+    text-align: left;
 }
 
 @mixin ctLb($color,$margin-bottom) {
