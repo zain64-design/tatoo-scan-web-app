@@ -2,7 +2,13 @@ import React from 'react'
 import Text from '../UI/Text';
 import Image from '../UI/Image';
 
-const AuthArea = ({authImg,authName}) => {
+const AuthArea = (otherData) => {
+
+    const authData = otherData;
+
+    const {authImg,authName} = authData;
+    
+
     return (
         <>
             <div className="author-area">

@@ -11,9 +11,9 @@ import AuthArea from './AuthArea';
 
 const BlogCard = () => {
 
-    const { data, loading, error } = useFetch(BLOG_API);
+    const { data, isloading, error } = useFetch(BLOG_API);
 
-    if (loading) return <div>loading...</div>;
+    if (isloading) return <div>loading...</div>;
 
     if (error) return <div>Fetching blogs: {error}</div>
 

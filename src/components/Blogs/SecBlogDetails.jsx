@@ -1,34 +1,27 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
-import Text from '../UI/Text'
 import CommentForm from './CommentForm';
+import BlogDesc from './BlogDesc';
+import '../../assets/scss/components/blog/secBlogDetails.scss'
+import Text from '../UI/Text';
+import Comments from './Comments';
 
-const SecBlogDetails = ({blogData}) => {
-    const { id, title,authName } = blogData;
-    
+const SecBlogDetails = (blogData) => {
     return (
         <>
             <section className='sec-blog-details'>
                 <Container>
                     <Row>
                         <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
-                        {/* <Text as="h4">{title}</Text>
-                        <Text as="h6">{authName}</Text> */}
-
-                            {/* {content.map((data) => {
-                                const {heading,para} = data;
-                                console.log(data);
-                                
-                                return (<div className="desc" key={id}>
-                                    {heading && <Text as="h6">{heading}</Text>}
-                                    {para && <Text as="p">{para}</Text>}
-                                </div>)
-                                return null;
-                            })} */}
-                            {}
-                            <div className="comment-area">
+                            <div className="desc-area">
+                                <BlogDesc blogData={blogData}/>
+                            </div>
+                            <div className="comment-form">
+                                <Text as="h4">Comments</Text>
                                 <CommentForm />
+                            </div>
+                            <div className="comments-area">
+                                <Comments/>
                             </div>
                         </Col>
                     </Row>

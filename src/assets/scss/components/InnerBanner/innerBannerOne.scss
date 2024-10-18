@@ -10,7 +10,29 @@
             @include blogHead();
         }
         p {
-
+            @include bannerPara(0)
+        }
+        .author-area {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+            flex-wrap: wrap;
+            .auth-ico {
+                height: 47px;
+                width: 47px;
+                object-fit: cover;
+                object-position: center;
+                border-radius: 50%;
+            }
+            span {
+                font-family: $font-7;
+                font-size: clamp(16px, 2.5vw, 26px);
+                line-height: normal;
+                color: $lt-grey-clr-4;
+                text-transform: capitalize;
+                display: inline-flex;
+            }
         }
     }
 }

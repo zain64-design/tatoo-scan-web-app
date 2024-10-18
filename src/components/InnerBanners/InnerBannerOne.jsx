@@ -5,7 +5,7 @@ import Text from '../UI/Text';
 import '../../assets/scss/components/InnerBanner/innerBannerOne.scss'
 import AuthArea from '../Blogs/AuthArea';
 
-const InnerBannerOne = ({ BannerTitle, backgroundImage, paragraph,blogTitle }) => {
+const InnerBannerOne = ({ BannerTitle, backgroundImage, paragraph,blogTitle,authName,authImg }) => {
 
     useBackgroundImage('.sec-inner-banner');
 
@@ -17,7 +17,7 @@ const InnerBannerOne = ({ BannerTitle, backgroundImage, paragraph,blogTitle }) =
                         <Col xs={12} sm={12} md={10} lg={8} xl={8} xxl={8}>
                             <div className="desc">
                                 {blogTitle && <Text as="h6" className='blog-heading'>{blogTitle}</Text>}
-                                <AuthArea/>
+                                <AuthArea authName={authName} authImg={authImg} />
                             </div>
                         </Col>
                     </Row>:<Row className="justify-content-center">
@@ -32,6 +32,6 @@ const InnerBannerOne = ({ BannerTitle, backgroundImage, paragraph,blogTitle }) =
             </section>
         </>
     )
-}
+};
 
 export default InnerBannerOne

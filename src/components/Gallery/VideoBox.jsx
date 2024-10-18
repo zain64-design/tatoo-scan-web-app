@@ -10,10 +10,10 @@ import '../../assets/scss/components/home/videoBox.scss'
 
 const VideoBox = () => {
 
-    const { data, loading, error } = useFetch('/src/utils/API/homeVideoGallery.json');
+    const { data, isloading, error } = useFetch('/src/utils/API/homeVideoGallery.json');
 
 
-    if (loading) return <div>Loading...</div>;
+    if (isloading) return <div>Loading...</div>;
     if (error) return <div>Error: {error}</div>;
 
     return (
