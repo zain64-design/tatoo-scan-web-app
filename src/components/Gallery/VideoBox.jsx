@@ -7,10 +7,11 @@ import { Col,Row } from 'react-bootstrap';
 import { Carousel } from '@fancyapps/ui';
 import useFetch from '../../utils/hooks/useFetch';
 import '../../assets/scss/components/home/videoBox.scss'
+import { HOME_VIDEO_GALLERY_API } from '../../utils/constant';
 
 const VideoBox = () => {
 
-    const { data, isloading, error } = useFetch('/src/utils/API/homeVideoGallery.json');
+    const { data, isloading, error } = useFetch(HOME_VIDEO_GALLERY_API);
 
 
     if (isloading) return <div>Loading...</div>;

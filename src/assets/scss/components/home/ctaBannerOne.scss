@@ -34,7 +34,7 @@
             @include xsHeading(clamp(22px,3vw,32px),clamp(32px,4vw,36px),clamp(10px,1.5vw,16px));
         }
         p {
-            @include paraThree(0, capitalize)
+            @include paraThree(0,$white-clr,clamp(24px, 2vw, 28px), capitalize)
         }
     }
 }

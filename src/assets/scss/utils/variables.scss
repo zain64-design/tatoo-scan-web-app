@@ -7,6 +7,7 @@ $lt-grey-clr: rgb(255 255 255 / 0.5);
 $lt-grey-clr-2: #7F7F7F;
 $lt-grey-clr-3: #92929D;
 $lt-grey-clr-4:#98989A;
+$lt-grey-clr-5:#c9c9c9;
 $prim-bg: #E0AA3B;
 $prim-bg-2: #cc9900;
 $sec-bg: #222;
@@ -17,6 +18,8 @@ $black-bg: #000;
 $black-bg-2: rgba(0,0,0,0.5);
 $black-bg-3: rgba(0,0,0,0);
 $black-bg-4: rgba(0,0,0,0.6);
+$black-bg-5: rgba(0,0,0,0.7);
+$black-bg-6: rgba(0,0,0,0.8);
 $white-bg: #fff;
 $grad-clr-1: rgba(0,0,0,1);
 $grad-clr-2: rgba(36,28,10,1);
@@ -28,4 +31,20 @@ $border-clr: #BEC0BF;
 $border-clr-2: rgba(255, 255, 255, 0.3);
 $gradient-1: linear-gradient(90deg, $prim-bg 0%, $black-bg 100%);
 $gradient-2: linear-gradient(180deg, $prim-bg 35%, $black-bg 100%);
-$gradient-3: linear-gradient(0deg, $grad-clr-1 0%, $grad-clr-2 0%, $grad-clr-3 50%, $grad-clr-4 100%);;
+$gradient-3: linear-gradient(0deg, $grad-clr-1 0%, $grad-clr-2 0%, $grad-clr-3 50%, $grad-clr-4 100%);
+
+// Breakpoints
+$breakpoint-fourxxl: 1600px;
+$breakpoint-twoxxl: 1445px;
+$breakpoint-xxl: 1400px;
+$breakpoint-xl: 1200px;
+$breakpoint-lg: 992px;
+$breakpoint-md: 768px;
+$breakpoint-sm: 576px;
+$breakpoint-tiny: 300px;
+
+// $breakpoint-sm: 576px;
+// $breakpoint-md: 768px;
+// $breakpoint-lg: 992px;
+// $breakpoint-xl: 1200px;
+// $breakpoint-xxl: 1400px;

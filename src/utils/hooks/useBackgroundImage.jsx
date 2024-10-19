@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-const useBackgroundImage = (selector) => {
+const useBackgroundImage = (selector,data) => {
   useEffect(() => {
     const elements = document.querySelectorAll(selector);
     elements.forEach((element) => {
@@ -10,7 +10,7 @@ const useBackgroundImage = (selector) => {
         element.style.backgroundImage = `url(${img})`;
       }
     });
-  }, [selector]);
+  }, [selector,data]);
 };
 
 export default useBackgroundImage;

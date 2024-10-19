@@ -1,26 +1,43 @@
-import React from 'react';
-import { Col, Container, Row } from 'react-bootstrap'
+import React, { useEffect } from 'react';
+import { Col, Container, Row } from 'react-bootstrap';
+import useFetch from '../../utils/hooks/useFetch';
+import { SERVICES_API } from '../../utils/constant';
 import useBackgroundImage from '../../utils/hooks/useBackgroundImage';
-import Text from '../UI/Text'
+import Text from '../UI/Text';
+import Image from '../UI/Image';
 
 const ServicesCard = () => {
-    useBackgroundImage('[data-bg-image]');
-  return (
-    <>
-                <div className='service-card' data-bg-image="/images/home/cta-bg1.jpg">
-                <Container>
-                    <Row>
-                        <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
-                            <div className="desc">
-                                <Text as="h4">Lorem Ipsum is simply dummy text </Text>
-                                <Text as="p">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</Text>
-                            </div>
-                        </Col>
-                    </Row>
-                </Container>
-            </div>
-    </>
-  )
+
+    const { data, isloading, error } = useFetch(SERVICES_API);
+
+    useBackgroundImage('[data-bg-image]',data);
+
+    if (isloading) return <div>loading...</div>
+
+    if (error) return <div>services fetching: {error}</div>
+
+    return (
+        <>
+            {data.map(((value) => {
+                const {id,title,thumbnail,icon,desc} =  value;
+                return (
+                    <div className='service-card' data-bg-image={thumbnail} key={id}>
+                        <Container>
+                            <Row>
+                                <Col xs={12} sm={12} md={12} lg={6} xl={5} xxl={5}>
+                                    <div className="desc">
+                                        <Image className="icons" src={icon} />
+                                        <Text as="h4">{title}</Text>
+                                        <Text as="p">{desc}</Text>
+                                    </div>
+                                </Col>
+                            </Row>
+                        </Container>
+                    </div>
+                )
+            }))}
+        </>
+    )
 }
 
 export default ServicesCard

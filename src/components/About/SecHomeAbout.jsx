@@ -3,8 +3,8 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Image from '../UI/Image';
 import aboutImage from '/images/home/about-img2.png';
 import Text from '../UI/Text';
-import homeAbout from '../../utils/API/homeAbout.json'
 import '../../assets/scss/components/home/homeAbout.scss'
+import HomeAboutBox from './HomeAboutBox';
 
 const SecHomeAbout = () => {
   return (
@@ -21,18 +21,7 @@ const SecHomeAbout = () => {
               <div className="desc">
                 <Text as="h2">What Makes Us Ink-redible</Text>
                 <Row>
-                  {homeAbout.map((data) => {
-                    const { id, image, head, desc } = data;
-                    return (<Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12} key={id}>
-                      <div className="box-main">
-                        <div className="ct-head">
-                          <Image src={image} className="icon" />
-                          <Text as="h6">{head}</Text>
-                        </div>
-                        <Text as="p">{desc}</Text>
-                      </div>
-                    </Col>)
-                  })}
+                  <HomeAboutBox/>
                 </Row>
               </div>
             </Col>

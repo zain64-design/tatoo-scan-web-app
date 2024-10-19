@@ -10,7 +10,7 @@ const SecServices = () => {
     <section className='sec-services'>
         <Container>
             <Row>
-                <Col xs={12} sm={12} md={10} lg={12} xl={12} xxl={12}>
+                <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
                 <div className="head-area">
                     <Text as="h6">Our Tattoo App</Text>
                     <Text as="h3">Services & Features</Text>

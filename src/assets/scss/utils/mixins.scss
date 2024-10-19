@@ -86,6 +86,26 @@
     text-align: center;
 }
 
+@mixin servicesHeading($font-family,$margin-bottom) {
+    font-family: $font-family;
+    font-size: clamp(22px, 4vw, 40px);
+    text-transform: capitalize;
+    line-height: normal;
+    color: $white-clr;
+    margin-bottom: $margin-bottom;
+    text-align: center;
+}
+
+@mixin serCardHead($margin-bottom,$text-align) {
+    font-family: $font-5;
+    font-size: clamp(18px, 3vw, 23px);
+    text-transform: capitalize;
+    line-height: clamp(24px, 3.5vw, 28px);
+    color: $white-clr;
+    margin-bottom: $margin-bottom;
+    text-align: $text-align;
+}
+
 @mixin paraOne($font-family,$margin,$color,$text-transform) {
     font-family: $font-family;
     font-size: clamp(16px, 1.5vw, 18px);
@@ -105,12 +125,12 @@
     letter-spacing: -0.1px;
 }
 
-@mixin paraThree($margin, $text-transform) {
+@mixin paraThree($margin,$color,$line-height, $text-transform) {
     font-family: $font-3;
     font-size: clamp(14px, 1.5vw, 16px);
-    line-height: clamp(24px, 2vw, 28px);
+    line-height: $line-height;
     margin: $margin;
-    color: $white-clr;
+    color: $color;
     text-transform: $text-transform;
     letter-spacing: -0.1px;
 }
@@ -233,9 +253,9 @@
 
 @mixin bannerPara($margin) {
     font-family: $font-3;
-    font-size: clamp(14px, 1.5vw, 18px);
-    line-height: clamp(24px, 3vw, 36px);
-    margin-top: clamp(20px,4vw,40px);
+    font-size: clamp(12px, 1.5vw, 18px);
+    line-height: clamp(20px, 3vw, 36px);
+    margin-top: clamp(10px,2vw,40px);
     text-transform: capitalize;
     color: $white-clr;
     opacity: 0.5;
@@ -261,3 +281,37 @@
     color: $color;
     margin-bottom: $margin-bottom;
 }
+
+@mixin respond-to($breakpoint) {
+    @if $breakpoint == four-xxl {
+        @media only screen and (min-width: 1600px) and (max-width: 1920px) { @content; }
+    } @else if $breakpoint == two-xxl {
+        @media only screen and (min-width: 1445px) and (max-width: 1599px) { @content; }
+    } @else if $breakpoint == xxl {
+        @media only screen and (min-width: 1400px) and (max-width: 1444px) { @content; }
+    } @else if $breakpoint == xl {
+        @media only screen and (min-width: 1200px) and (max-width: 1399px) { @content; }
+    } @else if $breakpoint == lg {
+        @media only screen and (min-width: 992px) and (max-width: 1199px) { @content; }
+    } @else if $breakpoint == md {
+        @media only screen and (min-width: 768px) and (max-width: 991px) { @content; }
+    } @else if $breakpoint == sm {
+        @media only screen and (min-width: 576px) and (max-width: 767px) { @content; }
+    } @else if $breakpoint == tiny {
+        @media only screen and (min-width: 300px) and (max-width: 575px) { @content; }
+    }
+}
+
+// @mixin respond-to($breakpoint) {
+//     @if $breakpoint == sm {
+//         @media (max-width: $breakpoint-sm) { @content; }
+//     } @else if $breakpoint == md {
+//         @media (max-width: $breakpoint-md) { @content; }
+//     } @else if $breakpoint == lg {
+//         @media (max-width: $breakpoint-lg) { @content; }
+//     } @else if $breakpoint == xl {
+//         @media (max-width: $breakpoint-xl) { @content; }
+//     } @else if $breakpoint == xxl {
+//         @media (max-width: $breakpoint-xxl) { @content; }
+//     }
+// }
