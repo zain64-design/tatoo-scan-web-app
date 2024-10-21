@@ -1,0 +1,45 @@
+@use '../../utils' as *;
+
+.sec-our-team {
+    .service-details {
+        .swiper-slide {
+            .desc {
+                h4 {
+                    @include xxlHeading(clamp(24px, 4vw, 48px), capitalize, normal, clamp(6px,1vw,12px), -1px);
+                }
+                h6 {
+
+                }
+                p{
+                    @include bannerPara(0,0,left);
+                }
+            }
+        }
+    }
+    .slider-main {
+        .service-slider {
+            .swiper-wrapper {
+                .swiper-slide {
+                    img {
+                        object-fit: cover;
+                        object-position: center;
+                        transition: all 0.3s ease-in-out;
+                        transform: scale(0.89);
+                        border-radius: 20px;
+                        width: 100%;
+                        height: auto;
+                        margin: 0 auto;
+                        display: block;
+                    }
+                    &.swiper-slide-active {
+                        margin-right: 20px !important;
+                        margin-left: 20px;
+                        img {
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }           
+    }
+}

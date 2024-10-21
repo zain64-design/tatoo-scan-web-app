@@ -1,6 +1,7 @@
 import React from 'react';
 import InnerBannerOne from '../components/InnerBanners/InnerBannerOne';
 import SecAbout from '../components/About/SecAbout'
+import SecAboutTeam from '../components/About/SecAboutTeam';
 
 const About = () => {
 
@@ -14,6 +15,7 @@ const About = () => {
     <>
     <InnerBannerOne {...aboutBannerInfo}/>
     <SecAbout/>
+    <SecAboutTeam/>
     </>
   )
 }

@@ -235,7 +235,6 @@
         bottom: 0;
         height: 100%;
         width: 100%;
-        background: linear-gradient(90deg, $black-bg 55%, $black-bg-2 70%, $black-bg-3 100%);
         background: linear-gradient(0deg, $black-bg 0%, $black-bg-4 50%, rgba(0,0,0,1) 100%);
         z-index: -1;
     }
@@ -251,16 +250,17 @@
     text-align: center;
 }
 
-@mixin bannerPara($margin) {
+@mixin bannerPara($margin-top,$margin-bottom,$text-align) {
     font-family: $font-3;
     font-size: clamp(12px, 1.5vw, 18px);
     line-height: clamp(20px, 3vw, 36px);
-    margin-top: clamp(10px,2vw,40px);
+    margin-top: $margin-top;
+    margin-bottom: $margin-bottom;
     text-transform: capitalize;
     color: $white-clr;
     opacity: 0.5;
     letter-spacing: -0.1px;
-    text-align: center;
+    text-align: $text-align;
 }
 
 @mixin blogHead() {

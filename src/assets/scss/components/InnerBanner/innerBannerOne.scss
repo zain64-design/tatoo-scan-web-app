@@ -10,7 +10,7 @@
             @include blogHead();
         }
         p {
-            @include bannerPara(0)
+            @include bannerPara(clamp(10px,2vw,40px),0,center)
         }
         .author-area {
             display: flex;
