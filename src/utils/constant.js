@@ -4,3 +4,6 @@ export const BLOG_COMMENTS_API = import.meta.env.VITE_APP_API_BLOG_COMMENTS
 export const SERVICES_API = import.meta.env.VITE_APP_API_SERVICES
 export const HOME_ABOUT_API = import.meta.env.VITE_APP_API_HOME_ABOUT
 export const HOME_VIDEO_GALLERY_API = import.meta.env.VITE_APP_API_HOME_VIDEO_GALLERY
+export const ABOUT_TEAM_SLIDER_API = import.meta.env.VITE_APP_API_ABOUT_TEAM_SLIDER
+export const ABOUT_DESC_API = import.meta.env.VITE_APP_API_ABOUT_DESC
+export const REWARDS_API = import.meta.env.VITE_APP_API_REWARDS

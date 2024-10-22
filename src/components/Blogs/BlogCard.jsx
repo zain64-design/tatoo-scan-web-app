@@ -8,13 +8,10 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
 import { BLOG_API } from '../../utils/constant';
 import AuthArea from './AuthArea';
-import useReactQuery from '../../utils/hooks/useReactQuery';
 
 const BlogCard = () => {
 
     const { data, isloading, error } = useFetch(BLOG_API);
-
-    // const { data, isloading, error } = useReactQuery(BLOG_API);
 
     if (isloading) return <div>loading...</div>;
 

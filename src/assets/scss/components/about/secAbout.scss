@@ -4,7 +4,7 @@
     z-index: 10;
     overflow: visible;
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: 80% top;
     background-size: contain;
     &::before {
         content: '';
@@ -15,8 +15,7 @@
         bottom: 0;
         height: 100%;
         width: 100%;
-        // background: linear-gradient(0deg, $black-bg 0%, $black-bg-4 50%, rgba(0,0,0,1) 100%);
-        background: linear-gradient(183deg, $black-bg 11.51%, transparent 64.22%, $black-bg 101.26%);
+        background: linear-gradient(183deg, $black-bg 1.51%, transparent 64.22%, $black-bg 93.26%);
         z-index: -1;
     }
     .bg-elem {
@@ -51,6 +50,15 @@
 		// 	filter: blur(250px);
 		// }
 	}
+    // .img-main {
+    //     position: relative;
+    //     z-index: -2;
+    //     img {
+    //         position: absolute;
+    //         top: 0;
+    //         bottom: 0;
+    //     }
+    // }
     .desc-area {
         .desc {
             margin-bottom: clamp(20px,5vw,57px);

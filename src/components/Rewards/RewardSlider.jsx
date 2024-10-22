@@ -1,0 +1,59 @@
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Thumbs, A11y, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/autoplay';
+import Image from '../UI/Image'
+
+const RewardSlider = ({data}) => {
+    return (
+        <>
+            <Swiper
+                modules={[A11y, Thumbs, Autoplay]}
+                autoplay={{ delay: 3000 }}
+                spaceBetween={90}
+                grabCursor={true}
+                loop={true}
+                breakpoints={{
+                    0: {
+                        slidesPerView: 1,
+                    },
+                    576: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                    },
+                    992: {
+                        slidesPerView: 4,
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                    },
+                    1400: {
+                        slidesPerView: 4,
+                    },
+                    1444: {
+                        slidesPerView: 4,
+                    },
+                    1599: {
+                        slidesPerView: 4,
+                    },
+                }}
+                className="award-slider"
+            >
+                {data.map((value) => {
+                    const { id, image } = value;
+                    return (
+                        <SwiperSlide key={id}>
+                            <Image src={image} />
+                        </SwiperSlide>
+                    )
+                })}
+            </Swiper>
+        </>
+    )
+}
+
+export default RewardSlider

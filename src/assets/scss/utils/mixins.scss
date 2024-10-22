@@ -39,6 +39,16 @@
     letter-spacing: 0.1px;
 }
 
+@mixin subHeading($font-size,$margin-bottom) {
+    font-family: $font-4;
+    font-size: $font-size;
+    line-height: normal;
+    margin-bottom: $margin-bottom;
+    color: $prim-clr-2;
+    text-transform: capitalize;
+    letter-spacing: -0.1px;
+}
+
 @mixin rgHeading($font-size,$text-transform,$line-height,$margin-bottom) {
     font-family: $font-3;
     font-size: $font-size;
