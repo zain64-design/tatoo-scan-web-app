@@ -12,7 +12,9 @@ import CircleLoader from '../Loader/CircleLoader';
 
 const BlogCard = () => {
 
-    const { data, isloading, error } = useFetch(BLOG_API);
+    // const { data, isloading, error } = useFetch(BLOG_API);
+
+    const { data, isLoading, error } = useQuery(['dataKey'], () => fetchData('your-api-url'));
 
     if (isloading) return <CircleLoader/>;
 

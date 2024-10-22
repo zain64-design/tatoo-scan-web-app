@@ -1,15 +1,18 @@
 import React from 'react'
 import Header from '../Header/Header'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Footer from '../Footer/Footer'
 
 const Layout = ({children}) => {
   return (
     <>
-    <Header/>
-    <main>
-        {children}
-    </main>
-    <Footer/>
+        <QueryClientProvider client={queryClient}>
+            <Header />
+            <main>
+                {children}
+            </main>
+            <Footer />
+        </QueryClientProvider>
     </>
   )
 }
