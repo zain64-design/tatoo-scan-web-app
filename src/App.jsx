@@ -9,6 +9,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 // import Layout from './components/Layout/Layout';
 // import BlogDetails from './pages/BlogDetails';
 import Layout from './components/Layout/Layout';
+import RouteLoader from './components/Loader/RouteLoader';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
@@ -35,7 +36,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <Router>
         <Layout>
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<RouteLoader/>}>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about-us" element={<About />} />
