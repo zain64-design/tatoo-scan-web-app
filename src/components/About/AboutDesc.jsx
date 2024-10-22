@@ -3,13 +3,13 @@ import Text from '../UI/Text'
 
 const AboutDesc = (...value) => {
   const descData = value[0].desc;
-  // console.log(value);
+  // console.log(descData);
 
 
   
   return (
     <>
-    {descData.map((value)=>{
+    {descData?.map((value)=>{
       const {id,head,para} = value;
       return (
         <div className="desc" key={id}>

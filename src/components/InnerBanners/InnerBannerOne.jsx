@@ -7,7 +7,7 @@ import AuthArea from '../Blogs/AuthArea';
 
 const InnerBannerOne = ({ BannerTitle, backgroundImage, paragraph,blogTitle,authName,authImg }) => {
 
-    useBackgroundImage('data-bg-image');
+    // useBackgroundImage('data-bg-image');
 
     return (
         <>

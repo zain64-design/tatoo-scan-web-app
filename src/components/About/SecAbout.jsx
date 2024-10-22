@@ -2,24 +2,36 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import AboutDesc from './AboutDesc';
 import useBackgroundImage from '../../utils/hooks/useBackgroundImage';
-import useFetch from '../../utils/hooks/useFetch'
+import { useQuery } from '@tanstack/react-query';
+import Text from '../UI/Text'
+import fetchData from '../../utils/hooks/fetchData';
+import CircleLoader from '../Loader/CircleLoader';
 import { ABOUT_DESC_API } from '../../utils/constant'
 import '../../assets/scss/components/about/secAbout.scss';
 
+const useFetchData = (key, url) => {
+    return useQuery({
+      queryKey: key,
+      queryFn: () => fetchData(url),
+    });
+  };
+
 const SecAbout = () => {
 
-    const { data, isloading, error } = useFetch(ABOUT_DESC_API);
-    useBackgroundImage('[data-bg-image]',data);
+    const {data:about,isLoading,isError,error} = useFetchData(['aboutDesc'],ABOUT_DESC_API);
+    useBackgroundImage('[data-bg-image]',about);
 
-    if (isloading) return <div>loading...</div>
+    if(isLoading) return <CircleLoader/>
 
-    if (error) return <div>fetching about details: {error}</div>
+    if (isError) {
+        return <Text as="h3" className='error-message'>Fetching about details: {error.message}</Text>
+    }
 
 
 
     return (
         <>
-            {data.map((value) => {
+            {about?.map((value) => {
                 const { id,image } = value;
                 return (
                     <section className='sec-about-inner' data-bg-image={image} key={id}>

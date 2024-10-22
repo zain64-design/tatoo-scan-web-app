@@ -26,7 +26,7 @@ const Links = () => {
     return (
         <>
             <ul className='navbar-nav m-auto'>
-                {links.map(({title,path})=>(
+                {links?.map(({title,path})=>(
                     <li className='nav-item' key={path}><NavLink className='nav-link' to={path}>{title}</NavLink></li>
                 ))}
             </ul>

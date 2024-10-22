@@ -35,7 +35,7 @@ const FooterLinks = () => {
 
     return (
         <>
-            {footerLinks.map((data, index) => {
+            {footerLinks?.map((data, index) => {
                 const titles = data;
                 const { title, links } = titles;
                 return (
@@ -43,7 +43,7 @@ const FooterLinks = () => {
                         <div className="categ-main">
                             <Text as="h6">{title}</Text>
                             <ul>
-                                {links.map((link, index) => {
+                                {links?.map((link, index) => {
                                     const allLinks = link;
                                     const { title, path } = allLinks;
                                     return (

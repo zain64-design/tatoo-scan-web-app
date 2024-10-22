@@ -2,11 +2,30 @@ import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import CommentForm from './CommentForm';
 import BlogDesc from './BlogDesc';
-import '../../assets/scss/components/blog/secBlogDetails.scss'
 import Text from '../UI/Text';
 import Comments from './Comments';
+import CircleLoader from '../Loader/CircleLoader';
+import { BLOG_COMMENTS_API } from '../../utils/constant';
+import fetchData from '../../utils/hooks/fetchData';
+import { useQuery } from '@tanstack/react-query';
+import '../../assets/scss/components/blog/secBlogDetails.scss'
+
+const useFetchData = (key, url) => {
+    return useQuery({
+      queryKey: key,
+      queryFn: () => fetchData(url),
+    });
+  };
 
 const SecBlogDetails = (blogData) => {
+
+    const {data:comments,isLoading,isError,error} = useFetchData(['comments'],BLOG_COMMENTS_API);
+        if(isLoading) return <CircleLoader/>
+
+        if (isError) {
+            return <Text as="h3" className='error-message'>Fetching Comments: {error.message}</Text>
+        }
+
     return (
         <>
             <section className='sec-blog-details'>
@@ -21,7 +40,7 @@ const SecBlogDetails = (blogData) => {
                                 <CommentForm />
                             </div>
                             <div className="comments-area">
-                                <Comments/>
+                                <Comments commentsData={comments}/>
                             </div>
                         </Col>
                     </Row>

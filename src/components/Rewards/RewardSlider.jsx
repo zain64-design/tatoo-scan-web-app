@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/autoplay';
 import Image from '../UI/Image'
 
-const RewardSlider = ({data}) => {
+const RewardSlider = ({rewardsData}) => {
     return (
         <>
             <Swiper
@@ -43,7 +43,7 @@ const RewardSlider = ({data}) => {
                 }}
                 className="award-slider"
             >
-                {data.map((value) => {
+                {rewardsData?.map((value) => {
                     const { id, image } = value;
                     return (
                         <SwiperSlide key={id}>

@@ -27,7 +27,7 @@ const CustomForm = ({ fields, onSubmit, validationSchema, buttonText }) => {
             <div className="form-main">
                 <Form onSubmit={formik.handleSubmit}>
                     <Row>
-                        {fields.map((field, index) => (
+                        {fields?.map((field, index) => (
                             <Col {...field.colProps} key={index}>
                                 <div className="input-field">
                                     <Form.Label className="fm-lb" htmlFor={id + field.name}>{field.label}</Form.Label>

@@ -2,8 +2,29 @@ import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import Text from '../UI/Text';
 import VideoBox from './VideoBox';
+import { HOME_VIDEO_GALLERY_API } from '../../utils/constant';
+import { useQuery } from '@tanstack/react-query';
+import fetchData from '../../utils/hooks/fetchData';
+import CircleLoader from '../Loader/CircleLoader';
 import '../../assets/scss/components/home/homeGallery.scss';
+
+const useFetchData = (key, url) => {
+    return useQuery({
+      queryKey: key,
+      queryFn: () => fetchData(url),
+    });
+  };
+
 const SecHomeGallery = () => {
+
+    const {data:gallery,isLoading,isError,error} = useFetchData(['gallery'],HOME_VIDEO_GALLERY_API);
+
+    if(isLoading) return <CircleLoader/>
+
+    if (isError) {
+        return <Text as="h3" className='error-message'>Fetching gallery: {error.message}</Text>
+    }
+
     return (
         <>
             <section className='sec-gallery'>
@@ -21,7 +42,7 @@ const SecHomeGallery = () => {
                     </div>
                     <Row>
                         <Container>
-                            <VideoBox/>
+                            <VideoBox galleryData={gallery}/>
                         </Container>
                     </Row>
                 </Container>

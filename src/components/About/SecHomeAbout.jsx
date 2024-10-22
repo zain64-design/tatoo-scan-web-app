@@ -3,10 +3,30 @@ import { Container, Row, Col } from 'react-bootstrap';
 import Image from '../UI/Image';
 import aboutImage from '/images/home/about-img2.png';
 import Text from '../UI/Text';
-import '../../assets/scss/components/home/homeAbout.scss'
 import HomeAboutBox from './HomeAboutBox';
+import { HOME_ABOUT_API } from '../../utils/constant';
+import { useQuery } from '@tanstack/react-query';
+import fetchData from '../../utils/hooks/fetchData';
+import CircleLoader from '../Loader/CircleLoader';
+import '../../assets/scss/components/home/homeAbout.scss';
+
+const useFetchData = (key, url) => {
+  return useQuery({
+    queryKey: key,
+    queryFn: () => fetchData(url),
+  });
+};
 
 const SecHomeAbout = () => {
+
+  const {data:homeAbout,isLoading,isError,error} = useFetchData(['homeAbout'],HOME_ABOUT_API);
+
+  if(isLoading) return <CircleLoader/>
+
+  if (isError) {
+      return <Text as="h3" className='error-message'>Fetching home About: {error.message}</Text>
+  }
+
   return (
     <>
       <section className="sec-about">
@@ -21,7 +41,7 @@ const SecHomeAbout = () => {
               <div className="desc">
                 <Text as="h2">What Makes Us Ink-redible</Text>
                 <Row>
-                  <HomeAboutBox/>
+                  <HomeAboutBox aboutData={homeAbout}/>
                 </Row>
               </div>
             </Col>

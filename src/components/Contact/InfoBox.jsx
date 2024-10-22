@@ -29,7 +29,7 @@ const contactInfo = [
 const InfoBox = () => {
     return (
         <>
-            {contactInfo.map((data,index) => {
+            {contactInfo?.map((data,index) => {
                 const {icon,title,link,value} = data;
                 return (
                     <Card className='info-card' key={index}>

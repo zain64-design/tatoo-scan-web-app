@@ -8,16 +8,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import SliderNav from './SliderNav';
 import TeamSliderDesc from './TeamSliderDesc';
-import useFetch from '../../utils/hooks/useFetch';
-import { ABOUT_TEAM_SLIDER_API } from '../../utils/constant';
 
-const TeamSlider = () => {
-
-    const { data, isloading, error } = useFetch(ABOUT_TEAM_SLIDER_API);
-
-    if (isloading) return <div>loading...</div>
-
-    if (error) return <div>fetching teams details: {error}</div>
+const TeamSlider = ({teamData}) => {
 
     return (
         <>
@@ -36,7 +28,7 @@ const TeamSlider = () => {
                         }}
                         className="team-details"
                     >
-                        {data.map((value) => {
+                        {teamData?.map((value) => {
                             const { id } = value;
                             return (
                                 <SwiperSlide key={id}>
@@ -52,7 +44,8 @@ const TeamSlider = () => {
                         <Swiper
                             modules={[Navigation, Thumbs, A11y]}
                             spaceBetween={1}
-                            grabCursor={true}
+                            grabCursor={false}
+                            touchRatio={0}
                             loop={true}
                             navigation={{
                                 prevEl: '.swiper-button-prev',
@@ -86,7 +79,7 @@ const TeamSlider = () => {
                             }}
                             className="team-slider"
                         >
-                            {data.map((value) => {
+                            {teamData?.map((value) => {
                                 const {id,image} = value;
                                 return (
                                     <SwiperSlide key={id}>

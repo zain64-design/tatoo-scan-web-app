@@ -1,28 +1,17 @@
 import React from 'react';
-import useFetch from '../../utils/hooks/useFetch';
 import { Card, Col,Stack } from 'react-bootstrap';
 import Image from '../UI/Image';
 import Text from '../UI/Text';
 import icon from '/images/blogs/icon.png';
 import { HiArrowUpRight } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
-import { BLOG_API } from '../../utils/constant';
 import AuthArea from './AuthArea';
-import CircleLoader from '../Loader/CircleLoader';
 
-const BlogCard = () => {
-
-    // const { data, isloading, error } = useFetch(BLOG_API);
-
-    const { data, isLoading, error } = useQuery(['dataKey'], () => fetchData('your-api-url'));
-
-    if (isloading) return <CircleLoader/>;
-
-    if (error) return <div>Fetching blogs: {error}</div>
+const BlogCard = ({blogsData}) => {
 
     return (
         <>
-            {data.map((value) => {
+            {blogsData?.map((value) => {
                 const {id,title,thumbnail,authImg,authName,share} = value;
                 return (
                     <Col xs={12} sm={6} md={6} lg={4} xl={4} xxl={4} key={id}>

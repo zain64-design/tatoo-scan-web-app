@@ -5,7 +5,7 @@ const BlogDesc = ({blogData}) => {
     const { content } = blogData;
     return (
         <>
-            {content.map((data) => {
+            {content?.map((data) => {
                 const { id, heading, para } = data;
                 return (<div className="desc" key={id}>
                     {heading && <Text as="h6">{heading}</Text>}

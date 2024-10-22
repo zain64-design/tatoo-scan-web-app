@@ -1,17 +1,30 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
-import useFetch from '../../utils/hooks/useFetch';
+import { useQuery } from '@tanstack/react-query';
+import fetchData from '../../utils/hooks/fetchData';
+import CircleLoader from '../Loader/CircleLoader';
 import { REWARDS_API } from '../../utils/constant';
 import RewardSlider from './RewardSlider';
 import RewardHead from './RewardHead';
+import Text from '../UI/Text'
 import '../../assets/scss/components/reward/secReward.scss'
 
+const useFetchData = (key, url) => {
+    return useQuery({
+      queryKey: key,
+      queryFn: () => fetchData(url),
+    });
+  };
+
 const SecReward = () => {
-    const { data, isloading, error } = useFetch(REWARDS_API);
 
-    if (isloading) return <div>loading...</div>;
+    const {data:rewards,isLoading,isError,error} = useFetchData(['rewards'],REWARDS_API);
 
-    if (error) return <div>Fetching rewards: {error}</div>
+    if(isLoading) return <CircleLoader/>
+
+    if (isError) {
+        return <Text as="h3" className='error-message'>Fetching rewards: {error.message}</Text>
+    }
 
     return (
         <>
@@ -21,7 +34,7 @@ const SecReward = () => {
                         <Col xs={12} sm={12} md={10} lg={12} xl={12} xxl={12}>
                             <div className="cta-reward">
                                 <RewardHead heading="Awards & Achievements"/>
-                                <RewardSlider data={data}/>
+                                <RewardSlider rewardsData={rewards}/>
                             </div>
                         </Col>
                     </Row>

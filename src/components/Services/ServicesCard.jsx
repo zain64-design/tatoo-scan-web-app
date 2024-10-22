@@ -1,26 +1,16 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import useFetch from '../../utils/hooks/useFetch';
-import { SERVICES_API } from '../../utils/constant';
 import useBackgroundImage from '../../utils/hooks/useBackgroundImage';
 import Text from '../UI/Text';
 import Image from '../UI/Image';
-import CircleLoader from '../Loader/CircleLoader';
-import FetchingError from '../Error/FetchingError';
 
-const ServicesCard = () => {
+const ServicesCard = ({servicesData}) => {
 
-    const { data, isloading, error } = useFetch(SERVICES_API);
-
-    useBackgroundImage('[data-bg-image]',data);
-
-    if (isloading) return <CircleLoader/>
-
-    if (error) return <FetchingError text='services' error={error}/>
+    useBackgroundImage('[data-bg-image]',servicesData);
 
     return (
         <>
-            {data.map(((value) => {
+            {servicesData?.map(((value) => {
                 const {id,title,thumbnail,icon,desc} =  value;
                 return (
                     <div className='service-card' data-bg-image={thumbnail} key={id}>
