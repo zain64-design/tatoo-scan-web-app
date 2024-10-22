@@ -33,6 +33,10 @@
 	width: 65px !important;
 	aspect-ratio: 1;
 	position: relative;
+	margin: 0 auto;
+	display: flex;
+    align-items: center;
+    justify-content: center;
 	&:before {
 		content: "";
 		position: absolute;

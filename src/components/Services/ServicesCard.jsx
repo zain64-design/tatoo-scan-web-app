@@ -5,6 +5,8 @@ import { SERVICES_API } from '../../utils/constant';
 import useBackgroundImage from '../../utils/hooks/useBackgroundImage';
 import Text from '../UI/Text';
 import Image from '../UI/Image';
+import CircleLoader from '../Loader/CircleLoader';
+import FetchingError from '../Error/FetchingError';
 
 const ServicesCard = () => {
 
@@ -12,9 +14,9 @@ const ServicesCard = () => {
 
     useBackgroundImage('[data-bg-image]',data);
 
-    if (isloading) return <div>loading...</div>
+    if (isloading) return <CircleLoader/>
 
-    if (error) return <div>services fetching: {error}</div>
+    if (error) return <FetchingError text='services' error={error}/>
 
     return (
         <>

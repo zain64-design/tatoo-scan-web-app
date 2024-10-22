@@ -8,12 +8,13 @@ import { HiArrowUpRight } from "react-icons/hi2";
 import { Link } from 'react-router-dom';
 import { BLOG_API } from '../../utils/constant';
 import AuthArea from './AuthArea';
+import CircleLoader from '../Loader/CircleLoader';
 
 const BlogCard = () => {
 
     const { data, isloading, error } = useFetch(BLOG_API);
 
-    if (isloading) return <div>loading...</div>;
+    if (isloading) return <CircleLoader/>;
 
     if (error) return <div>Fetching blogs: {error}</div>
 

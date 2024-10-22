@@ -3,7 +3,7 @@ import '../../assets/scss/components/loader/circleLoader.scss';
 
 const CircleLoader = () => {
   return (
-    <div class="loader"></div>
+    <div className="loader"></div>
   )
 }
 
