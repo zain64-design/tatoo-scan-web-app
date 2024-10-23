@@ -11,21 +11,42 @@
 		inset: 0 0 0 35px;
 	}
 }
+@keyframes l2 {
+	100% {
+		box-shadow: 0 0 0 40px #0000;
+	}
+}
 .loader-wrapper {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    .loader-inner {
-        width: 65px;
-        height: 30px;
-        position: relative;
-        &:before {
-            content: "";
-            position: absolute;
-            border-radius: 50px;
-            box-shadow: 0 0 0 3px inset $prim-clr-2;
-            animation: l3 0.75s infinite alternate;
-        }
-    }
+.loader-inner {
+	width: 20px;
+	aspect-ratio: 1;
+	border-radius: 50%;
+	background: #000;
+	box-shadow: 0 0 0 0 $prim-bg-2;
+	animation: l2 1.5s infinite linear;
+	position: relative;
+	&:before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		box-shadow: 0 0 0 0 $prim-bg-2;
+		animation: inherit;
+		animation-delay: -0.5s;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		border-radius: inherit;
+		box-shadow: 0 0 0 0 $prim-bg-2;
+		animation: inherit;
+		animation-delay: -0.5s;
+		animation-delay: -1s;
+	}
+}
 }

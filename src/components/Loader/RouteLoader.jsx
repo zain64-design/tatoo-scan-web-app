@@ -5,7 +5,7 @@ const RouteLoader = () => {
   return (
     <>
         <div className="loader-wrapper">
-            <div className="loader-inner"></div>
+          <div className="loader-inner"></div>
         </div>
     </>
   )
