@@ -28,26 +28,9 @@
                 @include xsHeading(clamp(14px,1.5vw,23px),normal,0)
             }
             a {
-                align-self: center;
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                margin: 0 auto;
-                height: clamp(40px,7vw,80px);
-                width: clamp(40px,7vw,80px);
-                border-radius: 50%;
-                background: $gradient-3;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background-size: 100%;
-                transition: all 0.5s ease-in-out;
+                @include playBtn(clamp(40px, 7vw, 80px),clamp(40px, 7vw, 80px),$gradient-3);
                 svg {
-                    font-size: clamp(20px,3vw,35px);
-                    color: $black-bg;
-                    margin: 0 0 0 5px;
+                    @include playIcon(clamp(20px, 3vw, 35px));
                 }
             }
         }

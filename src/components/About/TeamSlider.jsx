@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Thumbs, A11y } from 'swiper/modules';
+import { Navigation, Thumbs, A11y,Controller } from 'swiper/modules';
 import Image from '../UI/Image';
 import { Col, Row } from 'react-bootstrap';
 import 'swiper/css';
@@ -11,17 +11,23 @@ import TeamSliderDesc from './TeamSliderDesc';
 
 const TeamSlider = ({teamData}) => {
 
+    // const [descSwiper, setDescSwiper] = useState(null);
+    // const [imageSwiper, setImageSwiper] = useState(null);
+
     return (
         <>
             <Row className='row align-items-center justify-content-xxl-end justify-content-xl-end justify-content-lg-end justify-content-md-center justify-content-sm-center justify-content-center bg-elem'>
                 <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4}>
                     <Swiper
-                        modules={[Navigation, A11y, Thumbs]}
+                        modules={[Navigation, A11y, Thumbs,Controller]}
                         slidesPerView={1}
-                        grabCursor={false}
+                        // grabCursor={true}
                         touchRatio={0}
+                        // centeredSlides={true}
                         spaceBetween={10}
                         loop={true}
+                        // onSwiper={setImageSwiper}
+                        // controller={{ control: descSwiper }}
                         navigation={{
                             prevEl: '.swiper-button-prev',
                             nextEl: '.swiper-button-next',
@@ -42,11 +48,13 @@ const TeamSlider = ({teamData}) => {
                 <Col xs={12} sm={12} md={12} lg={7} xl={7} xxl={7} className='pe-xxl-0 pe-xl-0 pe-lg-0'>
                     <div className="slider-main">
                         <Swiper
-                            modules={[Navigation, Thumbs, A11y]}
+                            modules={[Navigation, Thumbs, A11y,Controller]}
                             spaceBetween={1}
-                            grabCursor={false}
+                            // grabCursor={true}
                             touchRatio={0}
                             loop={true}
+                            // onSwiper={setDescSwiper}
+                            // controller={{ control: imageSwiper }}
                             navigation={{
                                 prevEl: '.swiper-button-prev',
                                 nextEl: '.swiper-button-next',

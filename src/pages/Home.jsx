@@ -5,6 +5,7 @@ import SecHomeAbout from '../components/About/SecHomeAbout'
 import CTABannerOne from '../components/HomeBanner/CTABannerOne'
 import SecHomeGallery from '../components/Gallery/SecHomeGallery'
 import CTABannerThree from '../components/HomeBanner/CTABannerThree'
+import SecTestimonials from '../components/Testimonials/SecTestimonials'
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
     <CTABannerOne/>
     <SecHomeGallery/>
     <CTABannerTwo/>
+    <SecTestimonials/>
     <CTABannerThree/>
     </>
   )

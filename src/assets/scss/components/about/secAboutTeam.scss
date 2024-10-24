@@ -51,7 +51,7 @@
                     @include xxlHeading(clamp(24px, 4vw, 48px), capitalize, normal, clamp(6px,1vw,12px), -1px);
                 }
                 h6 {
-                    @include subHeading(clamp(16px,1.5vw,24px),clamp(15px,2.5vw,31px));
+                    @include subHeading(clamp(16px,1.5vw,24px),clamp(15px,2.5vw,31px),capitalize,-0.1px);
                 }
                 p{
                     @include bannerPara(0,0,left);
