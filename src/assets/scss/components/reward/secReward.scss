@@ -37,5 +37,19 @@
                 text-align: center;
             }
         }
+        .award-slider {
+            .swiper-wrapper {
+                .swiper-slide {
+                    img {
+                        align-content: center;
+                        display: block;
+                        margin: 0 auto;
+                        min-height: 179px;
+                        object-fit: contain;
+                        object-position: center;
+                    }
+                }
+            }
+        }
     }
 }

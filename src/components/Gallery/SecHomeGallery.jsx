@@ -31,11 +31,11 @@ const SecHomeGallery = () => {
                 <Container>
                     <div className="head-area">
                         <Row>
-                            <Col xs={12} sm={6} md={6} lg={6} xl={6} xxl={6}>
+                            <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
                                 <Text as="h4">Experience the magic of memory and artistry combined</Text>
                                 <Text as="h6">Your skin, your stories, your way!"</Text>
                             </Col>
-                            <Col xs={12} sm={6} md={6} lg={6} xl={6} xxl={6}>
+                            <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
                                 <Text as="p">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</Text>
                             </Col>
                         </Row>

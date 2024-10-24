@@ -243,9 +243,9 @@
 @mixin innerBannerOne() {
     position: relative;
     overflow: hidden;
-    padding-top: clamp(100px, 15vw, 196px);
     // padding-bottom: clamp(50px, 13vw, 165px);
-    height: clamp(277px, 44vw, 554px);
+    padding-top: clamp(80px, 17vw, 196px);
+    height: clamp(380px, 50vw, 554px);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -333,50 +333,61 @@
 }
 
 @mixin respond-to($breakpoint) {
-    @if $breakpoint ==four-xxl {
-        @media only screen and (min-width: 1600px) and (max-width: 1920px) {
+    @if $breakpoint == 'infinite-two' {
+        @media only screen and (min-width: $breakpoint-infinite-two) {
+            @content;
+        }
+    }
+    @if $breakpoint == 'infinite' {
+        @media only screen and (min-width: $breakpoint-infinite) {
             @content;
         }
     }
 
-    @else if $breakpoint ==two-xxl {
-        @media only screen and (min-width: 1445px) and (max-width: 1599px) {
+    @if $breakpoint == 'four-xxl' {
+        @media only screen and (min-width: $breakpoint-four-xxl) and (max-width: $breakpoint-infinite) {
             @content;
         }
     }
 
-    @else if $breakpoint ==xxl {
-        @media only screen and (min-width: 1400px) and (max-width: 1444px) {
+    @else if $breakpoint == 'two-xxl' {
+        @media only screen and (min-width: $breakpoint-two-xxl) and (max-width: 1599px) {
             @content;
         }
     }
 
-    @else if $breakpoint ==xl {
-        @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    @else if $breakpoint == 'xxl' {
+        @media only screen and (min-width: $breakpoint-xxl) and (max-width: 1444px) {
             @content;
         }
     }
 
-    @else if $breakpoint ==lg {
-        @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    @else if $breakpoint == 'xl' {
+        @media only screen and (min-width: $breakpoint-xl) and (max-width: 1399px) {
             @content;
         }
     }
 
-    @else if $breakpoint ==md {
-        @media only screen and (min-width: 768px) and (max-width: 991px) {
+    @else if $breakpoint == 'lg' {
+        @media only screen and (min-width: $breakpoint-lg) and (max-width: 1199px) {
             @content;
         }
     }
 
-    @else if $breakpoint ==sm {
-        @media only screen and (min-width: 576px) and (max-width: 767px) {
+    @else if $breakpoint == 'md' {
+        @media only screen and (min-width: $breakpoint-md) and (max-width: 991px) {
             @content;
         }
     }
 
-    @else if $breakpoint ==tiny {
-        @media only screen and (min-width: 300px) and (max-width: 575px) {
+    @else if $breakpoint == 'sm' {
+        @media only screen and (min-width: $breakpoint-sm) and (max-width: 767px) {
+            @content;
+        }
+    }
+
+    @else if $breakpoint == 'tiny' {
+        @media only screen and (min-width: $breakpoint-tiny) and (max-width: 575px) {
             @content;
         }
     }

@@ -28,7 +28,7 @@
             bottom: 0;
             height: 100%;
             width: 100%;
-            background: linear-gradient(90deg, $black-bg 60%, $black-bg-2 85%, $black-bg-3 100%);
+            background: linear-gradient(90deg, $black-bg 50%, $black-bg-2 85%, $black-bg-3 100%);
             z-index: -1;
         }
         .desc {
@@ -58,7 +58,7 @@
         &:nth-child(odd) {
             background-position: top left;
             &::before {
-                background: linear-gradient(270deg, $black-bg 60%, $black-bg-2 85%, $black-bg-3 100%);
+                background: linear-gradient(270deg, $black-bg 50%, $black-bg-2 85%, $black-bg-3 100%);
             }
             .container {
                 .row {
@@ -71,8 +71,15 @@
         }
     }
 }
-
-@include respond-to(two-xxl) {
+@include respond-to('infinite') {
+    .sec-services {
+        .service-card {
+            max-width: 1920px;
+            margin: 0 auto;
+        }
+    }
+  }
+@include respond-to('two-xxl') {
     .sec-services {
         .service-card {
             &::before {
@@ -86,7 +93,7 @@
         }
     }
   }
-  @include respond-to(xxl) {
+  @include respond-to('xxl') {
     .sec-services {
         .service-card {
             &::before {
@@ -100,7 +107,7 @@
         }
     }
   }
-  @include respond-to(xl) {
+  @include respond-to('xl') {
     .sec-services {
         .service-card {
             &::before {
@@ -114,7 +121,7 @@
         }
     }
   }
-  @include respond-to(lg) {
+  @include respond-to('lg') {
     .sec-services {
         .service-card {
             &::before {
@@ -128,7 +135,7 @@
         }
     }
   }
-  @include respond-to(md) {
+  @include respond-to('md') {
     .sec-services {
         .head-area {
             margin-top: 20px;
@@ -147,7 +154,7 @@
         }
     }
   }
-  @include respond-to(sm) {
+  @include respond-to('sm') {
     .sec-services {
         .head-area {
             margin-top: 20px;
@@ -166,7 +173,7 @@
         }
     }
   }
-  @include respond-to(tiny) {
+  @include respond-to('tiny') {
     .sec-services {
         .head-area {
             margin-top: 20px;

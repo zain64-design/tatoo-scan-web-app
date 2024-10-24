@@ -142,3 +142,20 @@
             }
     }
 }
+
+@include respond-to('infinite') {
+    .sec-blog {
+        margin-top: -5%;
+    }
+  }
+
+  @include respond-to('tiny') {
+    .sec-blog {
+        margin-top: -5%;
+        .blog-card {
+            .blog-img {
+                height: 280px;
+            }
+        }
+    }
+  }

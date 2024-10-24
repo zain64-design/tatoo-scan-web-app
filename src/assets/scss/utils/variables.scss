@@ -37,8 +37,10 @@ $gradient-4: linear-gradient(0deg, $black-bg -15%, $white-bg 100%);
 $gradient-5: linear-gradient(0deg, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,1) 100%);
 
 // Breakpoints
-$breakpoint-fourxxl: 1600px;
-$breakpoint-twoxxl: 1445px;
+$breakpoint-infinite-two: 2000px;
+$breakpoint-infinite: 1920px;
+$breakpoint-four-xxl: 1600px;
+$breakpoint-two-xxl: 1445px;
 $breakpoint-xxl: 1400px;
 $breakpoint-xl: 1200px;
 $breakpoint-lg: 992px;

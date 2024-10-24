@@ -6,8 +6,8 @@ footer {
     background-color: $black-bg;
 
     .footer-main {
-        padding: 60px 0 60px 0;
-
+        padding-top: clamp(30px,5vw,60px);
+        padding-bottom: clamp(30px,5vw,60px);
         .footer-about {
             p {
                 margin-top: 17px;

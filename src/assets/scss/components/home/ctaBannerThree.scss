@@ -1,6 +1,7 @@
 @use '../../utils' as *;
 
 .sec-cta-three {
+	padding-bottom: clamp(40px,4vw,77px);
 	.ct-bg {
 		content: '';
 		position: absolute;
@@ -67,3 +68,60 @@
 		}
 	}
 }
+
+@include respond-to('tiny') {
+    .sec-cta-three {
+		.ct-bg {
+			opacity: 0.9;
+			filter: blur(50px);
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			width: 100%;
+		}
+		.cta-area {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+    }
+  }
+
+  @include respond-to('sm') {
+    .sec-cta-three {
+		.ct-bg {
+			opacity: 0.9;
+			filter: blur(50px);
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			width: 100%;
+		}
+		.cta-area {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+    }
+  }
+
+  @include respond-to('md') {
+    .sec-cta-three {
+		.ct-bg {
+			opacity: 0.9;
+			filter: blur(50px);
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			width: 100%;
+		}
+		.cta-area {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+    }
+  }

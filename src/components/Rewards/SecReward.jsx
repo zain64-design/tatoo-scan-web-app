@@ -31,7 +31,7 @@ const SecReward = () => {
             <section className='sec-reward'>
                 <Container>
                     <Row>
-                        <Col xs={12} sm={12} md={10} lg={12} xl={12} xxl={12}>
+                        <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
                             <div className="cta-reward">
                                 <RewardHead heading="Awards & Achievements"/>
                                 <RewardSlider rewardsData={rewards}/>

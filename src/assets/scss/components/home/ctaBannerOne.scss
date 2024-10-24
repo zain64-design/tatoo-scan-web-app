@@ -38,3 +38,32 @@
         }
     }
 }
+
+@include respond-to('infinite') {
+    .sec-cta-one {
+		max-width: 2000px;
+        margin: 0 auto;
+    }
+  }
+
+  @include respond-to('tiny') {
+    .sec-cta-one {
+        .img-box {
+            img {
+                height: 250px;
+                transform: scale(1);
+            }
+        }
+    }
+  }
+
+  @include respond-to('sm') {
+    .sec-cta-one {
+        .img-box {
+            img {
+                height: 300px;
+                transform: scale(1);
+            }
+        }
+    }
+  }

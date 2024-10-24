@@ -6,10 +6,12 @@ import { FaPlay } from "react-icons/fa";
 import Text from '../UI/Text'
 import Slider from 'react-slick';
 import SliderNextArrow from "./SliderNextArrow";
+import "slick-carousel/slick/slick.scss";
+import "slick-carousel/slick/slick-theme.scss";
 
 
 const TestimonialSlider = ({ testimonialData }) => {
-    console.log(testimonialData);
+    // console.log(testimonialData);
 
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
@@ -33,14 +35,19 @@ const TestimonialSlider = ({ testimonialData }) => {
         waitForAnimate: false,
         arrows: false,
         fade: true,
+        swipeToSlide: false,
+        draggable: false,
+        touchMove: false,
     }
 
     const sliderTwoSetting = {
         asNavFor:nav3,
         ref:slider => (sliderRef2 = slider),
         slidesToShow: 1,
-        arrows: false,
         fade: true,
+        draggable: false,
+        touchMove: false,
+        nextArrow: <SliderNextArrow/>,
     }
 
     const sliderThreeSetting = {
@@ -48,15 +55,47 @@ const TestimonialSlider = ({ testimonialData }) => {
         ref:slider => (sliderRef3 = slider),
         slidesToShow: 3,
         swipeToSlide: true,
+        arrows: false,
         focusOnSelect: true,
-        nextArrow: <SliderNextArrow/>,
+        responsive: [
+            {
+              breakpoint: 575,
+              settings: {
+                slidesToShow: 1,
+              }
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+                breakpoint: 991,
+                settings: {
+                  slidesToShow: 2,
+                }
+              },
+              {
+                breakpoint: 1199,
+                settings: {
+                  slidesToShow: 2,
+                }
+              },
+              {
+                breakpoint: 1399,
+                settings: {
+                  slidesToShow: 3,
+                }
+              }
+          ]
     }
 
     return (
         <>
             <div className="testimonial-slider-area">
-                <Row className='justify-content-center gx-4 gx-sm-4 gx-md-4 gx-lg-4 gx-xl-3 gx-xxl-3'>
-                    <Col xs={12} sm={12} md={12} lg={4} xl={4} xxl={4}>
+                <Row className='justify-content-center align-items-center gx-4 gx-sm-4 gx-md-4 gx-lg-4 gx-xl-3 gx-xxl-3'>
+                    <Col xs={12} sm={12} md={5} lg={4} xl={4} xxl={4}>
                     <Fancybox options={{
                             Carousel: {
                                 infinite: false,
@@ -77,7 +116,7 @@ const TestimonialSlider = ({ testimonialData }) => {
                             </Slider>
                         </Fancybox>
                     </Col>
-                    <Col xs={12} sm={12} md={12} lg={7} xl={7} xxl={7}  className="position-relative">
+                    <Col xs={12} sm={12} md={7} lg={7} xl={7} xxl={7}  className="position-relative">
 
                         <Slider className="desc-slider" {...sliderTwoSetting}>
                             {testimonialData?.map((value)=> {
@@ -96,7 +135,7 @@ const TestimonialSlider = ({ testimonialData }) => {
                                 infinite: false,
                             }
                         }}>
-                            <Slider className="multi-img" {...sliderThreeSetting}>
+                            <Slider className="multi-img d-none d-sm-block d-md-block d-lg-block d-xl-block d-xxl-block" {...sliderThreeSetting}>
                                 {testimonialData?.map((value) => {
                                     const { id, image, designation, link } = value;
                                     return (

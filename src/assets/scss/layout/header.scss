@@ -98,4 +98,100 @@ header {
 			}
 		}
 	}
+	&.menu-open {
+		.header-btm {
+			.navbar {
+				background: $black-bg !important;
+				box-shadow: 0 0 11px 0px $shadow-1;
+			}
+		}
+	}
 }
+
+@include respond-to('md') {
+    header {
+		.header-btm {
+			.navbar {
+				.navbar-nav {
+					.nav-item {
+						&:last-child {
+							.nav-link {
+								margin-right: 15px;
+							}
+						}
+						&:first-child {
+							.nav-link {
+								margin-left: 15px;
+							}
+						}
+						.nav-link {
+							margin-top: 5px;
+							margin-bottom: 5px;
+						}
+					}
+				}
+			}
+			.side-ul {
+				justify-content: center;
+			}
+		}
+    }
+  }
+@include respond-to('sm') {
+    header {
+		.header-btm {
+			.navbar {
+				.navbar-nav {
+					.nav-item {
+						&:last-child {
+							.nav-link {
+								margin-right: 15px;
+							}
+						}
+						&:first-child {
+							.nav-link {
+								margin-left: 15px;
+							}
+						}
+						.nav-link {
+							margin-top: 5px;
+							margin-bottom: 5px;
+						}
+					}
+				}
+			}
+			.side-ul {
+				justify-content: center;
+			}
+		}
+    }
+  }
+@include respond-to('tiny') {
+    header {
+		.header-btm {
+			.navbar {
+				.navbar-nav {
+					.nav-item {
+						&:last-child {
+							.nav-link {
+								margin-right: 15px;
+							}
+						}
+						&:first-child {
+							.nav-link {
+								margin-left: 15px;
+							}
+						}
+						.nav-link {
+							margin-top: 5px;
+							margin-bottom: 5px;
+						}
+					}
+				}
+			}
+			.side-ul {
+				justify-content: center;
+			}
+		}
+    }
+  }

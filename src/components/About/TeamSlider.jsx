@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Thumbs, A11y,Controller } from 'swiper/modules';
 import Image from '../UI/Image';
@@ -11,9 +11,6 @@ import TeamSliderDesc from './TeamSliderDesc';
 
 const TeamSlider = ({teamData}) => {
 
-    // const [descSwiper, setDescSwiper] = useState(null);
-    // const [imageSwiper, setImageSwiper] = useState(null);
-
     return (
         <>
             <Row className='row align-items-center justify-content-xxl-end justify-content-xl-end justify-content-lg-end justify-content-md-center justify-content-sm-center justify-content-center bg-elem'>
@@ -21,13 +18,9 @@ const TeamSlider = ({teamData}) => {
                     <Swiper
                         modules={[Navigation, A11y, Thumbs,Controller]}
                         slidesPerView={1}
-                        // grabCursor={true}
                         touchRatio={0}
-                        // centeredSlides={true}
                         spaceBetween={10}
                         loop={true}
-                        // onSwiper={setImageSwiper}
-                        // controller={{ control: descSwiper }}
                         navigation={{
                             prevEl: '.swiper-button-prev',
                             nextEl: '.swiper-button-next',
@@ -50,11 +43,8 @@ const TeamSlider = ({teamData}) => {
                         <Swiper
                             modules={[Navigation, Thumbs, A11y,Controller]}
                             spaceBetween={1}
-                            // grabCursor={true}
                             touchRatio={0}
                             loop={true}
-                            // onSwiper={setDescSwiper}
-                            // controller={{ control: imageSwiper }}
                             navigation={{
                                 prevEl: '.swiper-button-prev',
                                 nextEl: '.swiper-button-next',

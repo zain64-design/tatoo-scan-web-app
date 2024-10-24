@@ -44,6 +44,7 @@
             text-align: center;
         }
     }
+    // for swiper
     .team-details {
         .swiper-slide {
             .desc {
@@ -59,6 +60,26 @@
             }
         }
     }
+    // for slick
+    // .team-details {
+    //     .slick-list {
+    //         .slick-track {
+    //             .slick-slide {
+    //                 .desc {
+    //                     h4 {
+    //                         @include xxlHeading(clamp(24px, 4vw, 48px), capitalize, normal, clamp(6px,1vw,12px), -1px);
+    //                     }
+    //                     h6 {
+    //                         @include subHeading(clamp(16px,1.5vw,24px),clamp(15px,2.5vw,31px),capitalize,-0.1px);
+    //                     }
+    //                     p{
+    //                         @include bannerPara(0,0,left);
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
     .btn-flex {
         display: flex;
         align-items: center;
@@ -87,6 +108,7 @@
             }
         }
     }
+    // for swiper
     .slider-main {
         .team-slider {
             .swiper-wrapper {
@@ -103,8 +125,8 @@
                         display: block;
                     }
                     &.swiper-slide-active {
-                        margin-right: 20px !important;
                         margin-left: 20px;
+                        margin-right: 20px !important;
                         img {
                             transform: scale(1);
                         }
@@ -113,4 +135,47 @@
             }
         }           
     }
+    // for slick
+    // .slider-main {
+    //     .team-slider {
+    //         .slick-list {
+    //             .slick-track {
+    //                 .slick-slide {
+    //                     &>div {
+    //                         transition: all 0.3s ease-in-out;
+    //                         img {
+    //                             object-fit: cover;
+    //                             object-position: center;
+    //                             transition: all 0.3s ease-in-out;
+    //                             transform: scale(0.89);
+    //                             border-radius: 20px;
+    //                             width: 100%;
+    //                             height: auto;
+    //                             margin: 0 auto;
+    //                             display: block;
+    //                         }
+    //                     }
+    //                     &.slick-active {
+    //                         &.slick-current {
+    //                             // margin-inline: 20px;
+    //                         &>div {
+    //                             img {
+    //                                 transform: scale(1);
+    //                             }
+    //                         }
+    //                         }
+    //                     }
+    //                 } 
+    //             }
+    //         }             
+    //     }       
+    // }
 }
+
+
+@include respond-to('infinite') {
+    .sec-our-team {
+		max-width: 2000px;
+        margin: 0 auto;
+    }
+  }

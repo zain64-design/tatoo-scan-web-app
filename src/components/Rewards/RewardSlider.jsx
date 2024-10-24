@@ -18,15 +18,19 @@ const RewardSlider = ({rewardsData}) => {
                 breakpoints={{
                     0: {
                         slidesPerView: 1,
+                        spaceBetween: 5,
                     },
                     576: {
                         slidesPerView: 2,
+                        spaceBetween: 10,
                     },
                     768: {
-                        slidesPerView: 3,
+                        slidesPerView: 2,
+                        spaceBetween: 15,
                     },
                     992: {
-                        slidesPerView: 4,
+                        slidesPerView: 3,
+                        spaceBetween: 20,
                     },
                     1200: {
                         slidesPerView: 4,

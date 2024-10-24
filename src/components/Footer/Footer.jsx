@@ -20,10 +20,10 @@ const Footer = () => {
                 adipiscing sociis arcu lorem porttitor.</Text>
               </div>
             </Col>
-            <Col xs={12} sm={8} md={8} lg={8} xl={8} xxl={8}>
+            <Col xs={12} sm={8} md={8} lg={8} xl={8} xxl={8} className='mt-4 mt-sm-4 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0'>
               <Row className="justify-content-center justify-content-sm-between justify-content-md-between justify-content-lg-between justify-content-xl-end justify-content-xxl-end">
                 <FooterLinks/>
-                <Col xs={12} sm={6} md={6} lg={6} xl={3} xxl={3} className='ms-xl-4 ms-xxl-4'>
+                <Col xs={12} sm={6} md={6} lg={6} xl={3} xxl={3} className='ms-xl-4 ms-xxl-4 mt-3 mt-sm-3 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0'>
                   <div className="support-area">
                     <Text as="h6">Contact Us</Text>
                     <ul>
