@@ -19,6 +19,15 @@
         position: relative;
         margin-top: clamp(40px,6vw,115px);
         .single-img {
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: -40%;
+                background: url(/images/testimonial/comma.png) center/contain no-repeat;
+                width: clamp(45px,10vw,133px);
+                height: clamp(35px,10vw,115px);
+            }
             .slick-list {
                 .slick-track {
                     .slick-slide {
@@ -120,6 +129,9 @@
     .sec-testimonial {
         .testimonial-slider-area {
             .single-img {
+                &::before {
+                    left: 30px;
+                }
                 .slick-list {
                     .slick-track {
                         .slick-slide {
@@ -144,6 +156,9 @@
     .sec-testimonial {
         .testimonial-slider-area {
             .single-img {
+                &::before {
+                    left: 0px;
+                }
                 .slick-list {
                     .slick-track {
                         .slick-slide {
@@ -167,6 +182,9 @@
     .sec-testimonial {
         .testimonial-slider-area {
             .single-img {
+                &::before {
+                    left: -15%;
+                }
                 .slick-list {
                     .slick-track {
                         .slick-slide {
