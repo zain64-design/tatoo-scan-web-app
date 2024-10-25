@@ -35,6 +35,10 @@
                             position: relative;
                             overflow: hidden;
                             .img-main {
+                                display: flex !important;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
                                 img {
                                     height: 500px;
                                     width: 100%;
@@ -63,6 +67,10 @@
                             position: relative;
                             overflow: hidden;
                             .img-main {
+                                display: flex !important;
+                                align-items: center;
+                                justify-content: center;
+                                flex-direction: column;
                                 img {
                                     height: 295px;
                                     object-fit: cover;
