@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Layout from './components/Layout/Layout';
-import RouteLoader from './components/Loader/RouteLoader';
+import { SkeletonTheme } from 'react-loading-skeleton';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
@@ -13,7 +13,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      suspense: true,
+      suspense: false,
       staleTime: 5000,       
       cacheTime: 180000,      // Cache time is now 3 minutes (180,000 ms) 
       retry: 2,              // Retry the request up to 2 times
@@ -42,9 +42,9 @@ function App() {
   return (
     <>
     <QueryClientProvider client={queryClient}>
-      <Suspense fallback={<RouteLoader />}>
-        <RouterProvider router={router} />
-      </Suspense>
+      <SkeletonTheme baseColor="#202020" highlightColor="#444">
+      <RouterProvider router={router} />
+      </SkeletonTheme>
       </QueryClientProvider>
     </>
   )

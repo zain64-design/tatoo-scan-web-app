@@ -9,6 +9,7 @@ import { BLOG_API } from '../../utils/constant';
 import Paginations from './Paginations';
 import '../../assets/scss/components/blog/secBlog.scss';
 
+
 const useFetchData = (key, url) => {
     return useQuery({
       queryKey: key,
@@ -20,7 +21,7 @@ const SecBlog = () => {
 
     const {data:blogs,isLoading,isError,error} = useFetchData(['blogs'],BLOG_API);
 
-    if(isLoading) return <CircleLoader/>
+    // if(isLoading) return <CircleLoader/>
 
     if (isError) {
         return <Text as="h3" className='error-message'>Fetching blogs: {error.message}</Text>
@@ -31,7 +32,7 @@ const SecBlog = () => {
             <section className='sec-blog'>
                 <Container>
                     <Row>
-                        <BlogCard blogsData={blogs}/>
+                        <BlogCard blogsData={blogs} loading={isLoading}/>
                     </Row>
                 </Container>
                 <Container>
