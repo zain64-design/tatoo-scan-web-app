@@ -35,7 +35,7 @@ const SecServices = () => {
                 </Col>
             </Row>
         </Container>
-        <ServicesCard servicesData={services}/>
+        <ServicesCard servicesData={services} loading={isLoading}/>
     </section>
     </>
   )
