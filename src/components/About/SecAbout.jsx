@@ -42,7 +42,7 @@ const SecAbout = () => {
                             <Row>
                                 <Col xs={12} sm={6} md={6} lg={6} xl={6} xxl={6}>
                                     <div className="desc-area">
-                                        <AboutDesc {...value} key={id} loading={isLoading} />
+                                        <AboutDesc {...value} key={id} />
                                     </div>
                                 </Col>
                             </Row>
