@@ -1,7 +1,6 @@
 import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import ServicesCard from './ServicesCard'
-import CircleLoader from '../Loader/CircleLoader';
 import { useQuery } from '@tanstack/react-query';
 import { SERVICES_API } from '../../utils/constant';
 import fetchData from '../../utils/hooks/fetchData';
@@ -18,8 +17,6 @@ const useFetchData = (key, url) => {
 const SecServices = () => {
 
   const {data:services,isLoading,isError,error} = useFetchData(['services'],SERVICES_API);
-
-  if(isLoading) return <CircleLoader/>
 
   if (isError) {
       return <Text as="h3" className='error-message'>Fetching Services: {error.message}</Text>
