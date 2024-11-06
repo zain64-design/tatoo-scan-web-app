@@ -7,7 +7,6 @@ import 'aos/dist/aos.css';
 const useAOS = (config = {}) => {
   useEffect(() => {
     const defaultConfig = {
-      disable: 'mobile',
       delay: 300,
       duration: 1000,
       easing: 'ease-in-out',
