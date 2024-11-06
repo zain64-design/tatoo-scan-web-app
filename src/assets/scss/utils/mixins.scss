@@ -128,7 +128,7 @@
 @mixin paraOne($font-family, $margin, $color, $text-transform) {
     font-family: $font-family;
     font-size: clamp(16px, 1.5vw, 18px);
-    line-height: clamp(22px, 3vw, 28px);
+    line-height: clamp(24px, 3vw, 28px);
     margin: $margin;
     color: $color;
     text-transform: $text-transform;
