@@ -80,10 +80,17 @@
 			bottom: 0;
 			height: 100%;
 			width: 100%;
+			background: $black-bg;
 		}
 		.cta-area {
 			padding-left: 15px;
 			padding-right: 15px;
+			background-size: 300px;
+			background-position: center right;
+			&::before {
+				height: 70px;
+				width: 140px;
+			}
 		}
     }
   }
@@ -99,26 +106,23 @@
 			bottom: 0;
 			height: 100%;
 			width: 100%;
+			background: $black-bg;
 		}
 		.cta-area {
 			padding-left: 15px;
 			padding-right: 15px;
+			background-size: 400px;
+			background-position: center right;
+			&::before {
+				height: 70px;
+				width: 140px;
+			}
 		}
     }
   }
 
   @include respond-to('md') {
     .sec-cta-three {
-		.ct-bg {
-			opacity: 0.9;
-			filter: blur(50px);
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			height: 100%;
-			width: 100%;
-		}
 		.cta-area {
 			padding-left: 15px;
 			padding-right: 15px;

@@ -9,6 +9,7 @@ import { useQuery } from '@tanstack/react-query';
 import fetchData from '../../utils/hooks/fetchData';
 import CircleLoader from '../Loader/CircleLoader';
 import '../../assets/scss/components/home/homeAbout.scss';
+import useAOS from '../../utils/hooks/useAOS';
 
 const useFetchData = (key, url) => {
   return useQuery({
@@ -21,6 +22,8 @@ const SecHomeAbout = () => {
 
   const {data:homeAbout,isLoading,isError,error} = useFetchData(['homeAbout'],HOME_ABOUT_API);
 
+  useAOS();
+
   if(isLoading) return <CircleLoader/>
 
   if (isError) {
@@ -32,12 +35,12 @@ const SecHomeAbout = () => {
       <section className="sec-about">
         <Container className='bg-elem'>
           <Row className='justify-content-center align-items-end'>
-            <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
+            <Col data-aos="fade-up" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
               <div className="img-box">
                 <Image src={aboutImage} />
               </div>
             </Col >
-            <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
+            <Col data-aos="fade-down" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
               <div className="desc">
                 <Text as="h2">What Makes Us Ink-redible</Text>
                 <Row>

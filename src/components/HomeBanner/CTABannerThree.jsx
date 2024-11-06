@@ -3,16 +3,18 @@ import Text from '../UI/Text';
 import AppBtn from './AppBtn';
 import { Container, Row, Col } from 'react-bootstrap';
 import useBackgroundImage from '../../utils/hooks/useBackgroundImage';
-import '../../assets/scss/components/home/ctaBannerThree.scss'
+import '../../assets/scss/components/home/ctaBannerThree.scss';
+import useAOS from '../../utils/hooks/useAOS';
 
 const CTABannerThree = () => {
     useBackgroundImage('[data-bg-image]');
+    useAOS();
     return (
         <>
             <section className='sec-cta-three'>
                 <Container>
                     <Row>
-                        <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
+                        <Col data-aos="fade-up" xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
                             <div className="cta-area" data-bg-image="/images/home/cta-img-4.png">
                                 <div className="ct-bg"></div>
                                 <Row>

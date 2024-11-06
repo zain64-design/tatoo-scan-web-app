@@ -8,10 +8,12 @@ import Slider from 'react-slick';
 import SliderNextArrow from "./SliderNextArrow";
 import "slick-carousel/slick/slick.scss";
 import "slick-carousel/slick/slick-theme.scss";
+import useAOS from '../../utils/hooks/useAOS';
 
 
 const TestimonialSlider = ({ testimonialData }) => {
-    // console.log(testimonialData);
+    
+    useAOS();
 
     const [nav1, setNav1] = useState(null);
     const [nav2, setNav2] = useState(null);
@@ -93,7 +95,7 @@ const TestimonialSlider = ({ testimonialData }) => {
 
     return (
         <>
-            <div className="testimonial-slider-area">
+            <div data-aos="fade-in" className="testimonial-slider-area">
                 <Row className='justify-content-center align-items-center gx-4 gx-sm-4 gx-md-4 gx-lg-4 gx-xl-3 gx-xxl-3'>
                     <Col xs={12} sm={12} md={5} lg={4} xl={4} xxl={4}>
                     <Fancybox options={{

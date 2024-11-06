@@ -4,10 +4,14 @@ import Text from '../UI/Text'
 import { FaPlay } from "react-icons/fa";
 import Fancybox from '../UI/Fancybox';
 import { Col,Row } from 'react-bootstrap';
-import '../../assets/scss/components/home/videoBox.scss'
+import '../../assets/scss/components/home/videoBox.scss';
+import useAOS from '../../utils/hooks/useAOS';
 
 
 const VideoBox = ({galleryData}) => {
+
+    useAOS();
+    
     return (
         <>
             <Fancybox options={{
@@ -20,7 +24,7 @@ const VideoBox = ({galleryData}) => {
                     const { id, image, head,link } = value;
 
                     return (
-                    <Col xs={12} sm={6} md={6} lg={6} xl={6} xxl={6} key={id}>
+                    <Col data-aos="fade-up" xs={12} sm={6} md={6} lg={6} xl={6} xxl={6} key={id}>
                         <div className="video-box">
                             <Image src={image} alt="video gallery" />
                             <div className="desc">

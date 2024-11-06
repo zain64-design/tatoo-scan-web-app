@@ -6,7 +6,8 @@ import '../../assets/scss/components/testimonial/secTestimonial.scss'
 import CircleLoader from '../Loader/CircleLoader';
 import { useQuery } from '@tanstack/react-query';
 import fetchData from '../../utils/hooks/fetchData';
-import { TESTIMONIAL_API } from '../../utils/constant'
+import { TESTIMONIAL_API } from '../../utils/constant';
+import useAOS from '../../utils/hooks/useAOS';
 
 const useFetchData = (key, url) => {
     return useQuery({
@@ -18,6 +19,8 @@ const useFetchData = (key, url) => {
 const SecTestimonials = () => {
 
     const {data:testimonial,isLoading,isError,error} = useFetchData(['testimonial'],TESTIMONIAL_API);
+
+    useAOS();
 
     if(isLoading) return <CircleLoader/>
   
@@ -36,7 +39,7 @@ const SecTestimonials = () => {
             <section className="sec-testimonial">
                 <Container>
                     <Row className='justify-content-center'>
-                        <Col xs={12} sm={12} md={12} lg={10} xl={10} xxl={10}>
+                        <Col data-aos="fade-up" xs={12} sm={12} md={12} lg={10} xl={10} xxl={10}>
                             <TestimonialHead {...headData} />
                         </Col>
                     </Row>

@@ -5,12 +5,14 @@ import useBackgroundImage from '../../utils/hooks/useBackgroundImage';
 import '../../assets/scss/components/home/ctaBannerTwo.scss'
 import { NavLink } from 'react-router-dom';
 import { HiOutlineArrowRight } from "react-icons/hi";
+import useAOS from '../../utils/hooks/useAOS';
 
 const CTABannerTwo = () => {
     useBackgroundImage('[data-bg-image]');
+    useAOS();
     return (
         <>
-            <section className='sec-cta-two' data-bg-image="/images/home/cta-bg1.jpg">
+            <section data-aos="fade-in" className='sec-cta-two' data-bg-image="/images/home/cta-bg1.jpg">
                 <Container>
                     <Row>
                         <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
