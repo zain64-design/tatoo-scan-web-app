@@ -105,10 +105,10 @@ const TestimonialSlider = ({ testimonialData }) => {
                         }}>
                             <Slider className="single-img" {...sliderOneSetting}>
                                 {testimonialData?.map((value) => {
-                                    const { id, image, designation, link } = value;
+                                    const { id, image, clientName, link } = value;
                                     return (
                                         <div className="img-main" key={id}>
-                                            <a data-fancybox="gallery" data-caption={designation} data-src={link} href={link}>
+                                            <a data-fancybox="gallery" data-caption={clientName} data-src={link} href={link}>
                                                 <FaPlay />
                                             </a>
                                             <Image src={image} alt='slider-img' />
@@ -122,11 +122,11 @@ const TestimonialSlider = ({ testimonialData }) => {
 
                         <Slider className="desc-slider" {...sliderTwoSetting}>
                             {testimonialData?.map((value)=> {
-                                const {id,desc,designation,name} = value;
+                                const {id,desc,clientName,title} = value;
                                 return (
                                     <div className="desc" key={id}>
-                                        <Text as="h4">{name}</Text>
-                                        <Text as="h6">{designation}</Text>
+                                        <Text as="h4">{title}</Text>
+                                        <Text as="h6">{clientName}</Text>
                                         <Text as="p">{desc}</Text>
                                     </div>
                                 )
@@ -139,10 +139,10 @@ const TestimonialSlider = ({ testimonialData }) => {
                         }}>
                             <Slider className="multi-img d-none d-sm-block d-md-block d-lg-block d-xl-block d-xxl-block" {...sliderThreeSetting}>
                                 {testimonialData?.map((value) => {
-                                    const { id, image, designation, link } = value;
+                                    const { id, image, clientName, link } = value;
                                     return (
                                         <div className="img-main" key={id}>
-                                            <a data-fancybox="gallery" data-caption={designation} data-src={link} href={link}>
+                                            <a data-fancybox="gallery" data-caption={clientName} data-src={link} href={link}>
                                                 <FaPlay />
                                             </a>
                                             <Image src={image} alt='slider-img' />

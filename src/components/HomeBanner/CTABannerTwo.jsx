@@ -17,8 +17,8 @@ const CTABannerTwo = () => {
                     <Row>
                         <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
                             <div className="desc">
-                                <Text as="h4">Lorem Ipsum is simply dummy text </Text>
-                                <Text as="p">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,</Text>
+                                <Text as="h4">Revolutionizing the Interactive Tattoo Experience</Text>
+                                <Text as="p">Tattooscan transforms the traditional concept of tattoos from static images into dynamic, interactive experiences. By seamlessly integrating your tattoos with personalized tattoo content, Tattooscan allows you to capture and share tattoo stories behind your ink like never before. Whether it’s a cherished memory, a meaningful message, or a unique piece of art, Tattooscan connects you with people in tattoo community in a deeper and more engaging way.</Text>
                                 <NavLink to='/contact' className='btn btn-contact'>contact us 
                                 <HiOutlineArrowRight />
                                 </NavLink>

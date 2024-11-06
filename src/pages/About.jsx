@@ -9,7 +9,7 @@ const About = () => {
   const aboutBannerInfo = {
     BannerTitle: "About Us",
     backgroundImage: "/images/about/about-bg.png",
-    paragraph: "Tattoos are more than just ink. They hold your stories and your identity. Our team is made up of tattoo fans and tech enthusiasts who wanted to change the game. We’re all about mixing traditional tattoo art with modern tech to give you a way to connect with your ink like never before. So, if you’re an artist ready to showcase your talent or someone wanting to share what your tattoo means, TattooScan is here to make your tattoo experience even cooler."
+    paragraph: "At Tattooscan, we believe that tattoos are more than just ink on skin—they’re more like Tattoo community, personal stories, memories, and expressions of identity. Founded by a team of tattoo enthusiasts and tech innovators, we set out to revolutionize the way people connect with their tattoos. Our platform bridges the gap between traditional body art and modern technology, allowing users to add an interactive tattoo experience, multimedia dimension to their tattoos. Whether you're an artist looking to showcase your work or someone who wants to share your personalized tattoo content that has deeper meaning behind ink, Tattooscan offers a unique way to enhance your tattoo experience."
   }
 
   return (

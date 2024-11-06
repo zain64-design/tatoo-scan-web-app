@@ -20,8 +20,8 @@ const CTABannerThree = () => {
                                 <Row>
                                     <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
                                         <div className="desc">
-                                            <Text as="h4">Stay in the Loop</Text>
-                                            <Text as="p">Get latest updates, tips, and tattoo stories delivered straight to your inbox. Subscribe to our newsletter NOW!</Text>
+                                            <Text as="h4">Experience Your Tattoo Artist Discovery Like Never Before</Text>
+                                            <Text as="p">Tattooscan isn’t just an app—it’s a new way to experience and connect with your body art. Download Tattooscan today and unlock the full potential of your personalized tattoo content.</Text>
                                             <AppBtn />
                                         </div>
                                     </Col>

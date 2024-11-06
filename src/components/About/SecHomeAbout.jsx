@@ -34,7 +34,7 @@ const SecHomeAbout = () => {
     <>
       <section className="sec-about">
         <Container className='bg-elem'>
-          <Row className='justify-content-center align-items-end'>
+          <Row className='justify-content-center align-items-center'>
             <Col data-aos="fade-up" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
               <div className="img-box">
                 <Image src={aboutImage} />
@@ -42,7 +42,7 @@ const SecHomeAbout = () => {
             </Col >
             <Col data-aos="fade-down" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
               <div className="desc">
-                <Text as="h2">What Makes Us Ink-redible</Text>
+                <Text as="h2">What to Expect</Text>
                 <Row>
                   <HomeAboutBox aboutData={homeAbout}/>
                 </Row>

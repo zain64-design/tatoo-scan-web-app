@@ -5,9 +5,9 @@ import SecServices from '../components/Services/SecServices';
 const Services = () => {
 
   const serviceBannerInfo = {
-    BannerTitle: "Services",
+    BannerTitle: "Explore the Power of Tattooscan",
     backgroundImage: "/images/services/service-bg.png",
-    paragraph: "Tattoos are more than just ink. They hold your stories and your identity. Our team is made up of tattoo fans and tech enthusiasts who wanted to change the game. We’re all about mixing traditional tattoo art with modern tech to give you a way to connect with your ink like never before. So, if you’re an artist ready to showcase your talent or someone wanting to share what your tattoo means, TattooScan is here to make your tattoo experience even cooler."
+    paragraph: "Tattooscan is more than just an tattoo app—it’s a transformative tool that enhances your tattoo storytelling, connects you with artists, and brings the stories behind your ink to life. Discover the interactive tattoo experience and innovative features that make Tattooscan the ultimate platform for tattoo enthusiasts and artists alike."
   }
 
   return (

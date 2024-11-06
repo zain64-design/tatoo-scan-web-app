@@ -3,40 +3,40 @@
         "id":1,
         "image": "/images/testimonial/ts1.png",
         "link": "https://www.youtube.com/watch?v=GJAsS6FoOWo",
-        "name": "Kevin Dave",
-        "designation": "Tattoo Artist",
-        "desc": "I really like TattooScan. It helps me share the stories behind my tattoos. My friends enjoy learning about my ink, and it makes my tattoos feel even more special."
+        "title": "A Whole New Dimension to My Ink",
+        "clientName": "Alex M., Proud Tattoo Enthusiast",
+        "desc": "I’ve always loved my tattoos, but this tattoo app brought them to life in a way I never imagined. Now, I can share the story behind each piece with friends and family through videos and messages. It’s like having a personal time capsule on my skin!"
     },
     {
         "id":2,
         "image": "/images/testimonial/ts2.png",
         "link": "https://www.youtube.com/watch?v=TP8N1a-edBE",
-        "name": "Alexa Brook",
-        "designation": "Tattoo Artist",
-        "desc": "I really like TattooScan. It helps me share the stories behind my tattoos. My friends enjoy learning about my ink, and it makes my tattoos feel even more special."
+        "title": "A Game-Changer for Artists",
+        "clientName": "Rachel S., Tattoo Artist",
+        "desc": "Tattooscan has completely transformed how I connect with my clients. I can now share the inspiration and tattoo storytelling behind each design through audio and video messages. It’s an amazing tool that lets my artwork speak for itself, even when I’m not around!"
     },
     {
         "id":3,
         "image": "/images/testimonial/ts3.png",
         "link": "https://www.youtube.com/watch?v=GJAsS6FoOWo",
-        "name": "Danny Brook",
-        "designation": "Tattoo Artist",
-        "desc": "I really like TattooScan. It helps me share the stories behind my tattoos. My friends enjoy learning about my ink, and it makes my tattoos feel even more special."
+        "title": "The Perfect Blend of Art and Technology",
+        "clientName": "Jason T., Marathon Runner and Tattoo Collector",
+        "desc": "I never thought I could relive the moment I got my first tattoo, but with Tattooscan, I can scan it and watch the video of that day whenever I want. It’s like my tattoos have their own memory now. This app is a must-have for anyone who loves tattoos!"
     },
     {
         "id":4,
         "image": "/images/testimonial/ts4.png",
         "link": "https://www.youtube.com/watch?v=TP8N1a-edBE",
-        "name": "Clark Brook",
-        "designation": "Tattoo Artist",
-        "desc": "I really like TattooScan. It helps me share the stories behind my tattoos. My friends enjoy learning about my ink, and it makes my tattoos feel even more special."
+        "title": "Connecting Through Ink",
+        "clientName": "Mia L., Tattoo Collector",
+        "desc": "I’ve met so many amazing people through Tattooscan. I love scanning my tattoos and seeing how others have share tattoo stories. It’s created a real sense of community and connection among tattoo lovers."
     },
     {
         "id":5,
         "image": "/images/testimonial/ts5.png",
         "link": "https://www.youtube.com/watch?v=GJAsS6FoOWo",
-        "name": "Nina Brook",
-        "designation": "Tattoo Artist",
-        "desc": "I really like TattooScan. It helps me share the stories behind my tattoos. My friends enjoy learning about my ink, and it makes my tattoos feel even more special."
+        "title": "Bringing My Stories to Life",
+        "clientName": "Chris D., Tattoo Enthusiast",
+        "desc": "Each of my tattoos has a deep personal meaning, and with Tattooscan, I can finally share those stories in a meaningful way. Scanning my tattoos and reliving the memories behind them is such a unique experience. This app is brilliant!"
     }
 ]

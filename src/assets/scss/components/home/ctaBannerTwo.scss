@@ -5,7 +5,7 @@
 	padding-bottom: clamp(40px,5vw,70px);
     background-repeat: no-repeat;
     background-position: top right;
-    background-size: 940px;
+    background-size: contain;
     &::before {
         content: '';
         position: absolute;
@@ -15,7 +15,7 @@
         bottom: 0;
         height: 100%;
         width: 100%;
-        background: linear-gradient(90deg, $black-bg 55%, $black-bg-2 70%, $black-bg-3 100%);
+        background: linear-gradient(90deg, $black-bg 40%, $black-bg-2 70%, $black-bg-3 100%);
         z-index: -1;
     }
     .desc {
