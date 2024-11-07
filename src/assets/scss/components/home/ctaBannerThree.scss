@@ -13,10 +13,10 @@
 		border-radius: 50%;
 		opacity: 0.8;
 		filter: blur(267.5561828613281px);
-		z-index: -1;
+		z-index: -3;
 	}
 	.cta-area {
-		background: $black-bg;
+		background-color: $black-bg;
 		z-index: 2;
 		padding-top: clamp(30px,9vw,108px);
 		padding-bottom: clamp(30px,10vw,120px);
@@ -72,21 +72,24 @@
 @include respond-to('tiny') {
     .sec-cta-three {
 		.ct-bg {
-			opacity: 0.9;
-			filter: blur(50px);
-			top: 0;
+			background: $sec-bg-2;
 			left: 0;
+			top: 0;
 			right: 0;
 			bottom: 0;
 			height: 100%;
 			width: 100%;
-			background: $black-bg;
+			max-width: 100%;
+			filter: blur(0);
+			opacity: 90%;
+			border-radius: 0;
 		}
 		.cta-area {
 			padding-left: 15px;
 			padding-right: 15px;
 			background-size: 300px;
 			background-position: center right;
+			background-color: $sec-bg-2;
 			&::before {
 				height: 70px;
 				width: 140px;
@@ -98,21 +101,24 @@
   @include respond-to('sm') {
     .sec-cta-three {
 		.ct-bg {
-			opacity: 0.9;
-			filter: blur(50px);
-			top: 0;
+			background: $sec-bg-2;
 			left: 0;
+			top: 0;
 			right: 0;
 			bottom: 0;
 			height: 100%;
 			width: 100%;
-			background: $black-bg;
+			max-width: 100%;
+			filter: blur(0);
+			opacity: 90%;
+			border-radius: 0;
 		}
 		.cta-area {
 			padding-left: 15px;
 			padding-right: 15px;
 			background-size: 400px;
 			background-position: center right;
+			background-color: $sec-bg-2;
 			&::before {
 				height: 70px;
 				width: 140px;
@@ -123,9 +129,35 @@
 
   @include respond-to('md') {
     .sec-cta-three {
+		.ct-bg {
+			background: $sec-bg-2;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			width: 100%;
+			max-width: 100%;
+			filter: blur(0);
+			opacity: 90%;
+			border-radius: 0;
+		}
 		.cta-area {
 			padding-left: 15px;
 			padding-right: 15px;
+			background-size: 400px;
+			background-position: center right;
+			background-color: $sec-bg-2;
 		}
     }
+  }
+
+  @include respond-to('lg') {
+	.sec-cta-three {
+		.cta-area {
+			padding-left: 15px;
+			padding-right: 15px;
+			background-position: center right;
+		}
+	}
   }
