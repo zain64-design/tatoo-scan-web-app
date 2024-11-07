@@ -1,7 +1,7 @@
 @use '../../utils' as *;
 
 .sec-inner-banner {
-    @include innerBannerOne();
+    @include innerBannerOne($height:clamp(380px, 50vw, 554px));
     .desc {
         .banner-heading {
             @include bannerHead(0);
@@ -36,3 +36,17 @@
         }
     }
 }
+
+@include respond-to('sm') {
+    .sec-inner-banner {
+        @include innerBannerOne($height:auto);
+        padding-bottom: 30px;
+    }
+  }
+
+@include respond-to('tiny') {
+    .sec-inner-banner {
+        @include innerBannerOne($height:auto);
+        padding-bottom: 30px;
+    }
+  }

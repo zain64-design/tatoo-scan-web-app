@@ -16,8 +16,7 @@ const Footer = () => {
             <Col xs={12} sm={12} md={4} lg={3} xl={3} xxl={3}>
               <div className="footer-about">
                 <Image src={logo} className='thumb' alt='footer logo' />
-                <Text as='p'>Cum et convallis risus placerat aliquam, nunc. Scelerisque aliquet faucibus tincidunt eu
-                adipiscing sociis arcu lorem porttitor.</Text>
+                <Text as='p'>Scan tattoos to unlock videos, audio messages, and detailed stories behind your ink. Share tattoo stories, meaning and emotion tied to your tattoos with friends, family, and the world.</Text>
               </div>
             </Col>
             <Col xs={12} sm={8} md={8} lg={8} xl={8} xxl={8} className='mt-4 mt-sm-4 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0'>

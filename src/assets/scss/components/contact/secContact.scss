@@ -58,3 +58,15 @@
         margin-top: -5%;
     }
   }
+
+  @include respond-to('sm') {
+    .sec-contact {
+        margin-top: 0;
+    }
+  }
+
+  @include respond-to('tiny') {
+    .sec-contact {
+        margin-top: 0;
+    }
+  }

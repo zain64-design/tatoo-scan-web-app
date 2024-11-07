@@ -39,7 +39,7 @@ const SecHomeGallery = () => {
                                 <Text as="h6">Your skin, your stories, your way!"</Text>
                             </Col>
                             <Col data-aos="fade-left" xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
-                                <Text as="p">orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</Text>
+                                <Text as="p">Join a vibrant community of tattoo enthusiasts, artists, and studios. Share your tattoo stories, discover new artists, and stay updated on tattoo events and trends.</Text>
                             </Col>
                         </Row>
                     </div>
