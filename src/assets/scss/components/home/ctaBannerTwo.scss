@@ -55,3 +55,25 @@
         }
     }
   }
+
+  @include respond-to('sm') {
+    .sec-cta-two {
+        margin-top: 0;
+        background-position: center right;
+        background-size: cover;
+        &::before {
+            background: linear-gradient(90deg, $black-bg-6 100%, $black-bg-6 100%, $black-bg-6 100%);   
+        }
+    }
+  }
+
+  @include respond-to('tiny') {
+    .sec-cta-two {
+        margin-top: 0;
+        background-position: center right;
+        background-size: cover;
+        &::before {
+            background: linear-gradient(90deg, $black-bg-6 100%, $black-bg-6 100%, $black-bg-6 100%);   
+        }
+    }
+  }
