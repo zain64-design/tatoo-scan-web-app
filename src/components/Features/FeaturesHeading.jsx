@@ -1,7 +1,7 @@
 import React from 'react'
 import Text from '../UI/Text'
 
-const ServicesHeading = ({subHeading,mainHeading}) => {
+const FeaturesHeading = ({subHeading,mainHeading}) => {
     return (
         <>
             <div className="head-area">
@@ -12,4 +12,4 @@ const ServicesHeading = ({subHeading,mainHeading}) => {
     )
 }
 
-export default ServicesHeading
+export default FeaturesHeading

@@ -27,7 +27,7 @@ const Footer = () => {
                     <Text as="h6">Contact Us</Text>
                     <ul>
                       <li><a href="mailto:help@email.com" className="icon icon-mail">help@email.com</a></li>
-                      <li><a href="tel:+123445667889" className="icon icon-phone">+1 234 456 678 89</a></li>
+                      {/* <li><a href="tel:+123445667889" className="icon icon-phone">+1 234 456 678 89</a></li> */}
                     </ul>
                   </div>
                 </Col>

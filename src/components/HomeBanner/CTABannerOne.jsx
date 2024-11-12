@@ -22,8 +22,8 @@ const CTABannerOne = () => {
                         <Col data-aos="zoom-out-down" xs={12} sm={12} md={4} lg={3} xl={3} xxl={3}>
                             <div className="desc">
                                 <Image src={ctaImgThree} className="icon"/>
-                                <Text as="h6">Easy Tattoo Management</Text>
-                                <Text as='p'>Our app is like your personal tattoo curator, but way cooler. It lets you store, organize, and manage your entire tattoo collection in one place. You can also add details, stories, and preferences to each tattoo, creating a personalized digital archive that's totally you.</Text>
+                                <Text as="h6">Your Tattoo Archive, Reimagined</Text>
+                                <Text as='p'>Keep your tattoo journey at your fingertips. Tattooscan lets you save, organize, and personalize each tattoo with stories, details, and artist information in one streamlined space. Turn your collection into a meaningful digital gallery, capturing every memory and moment that makes each tattoo unique to you.</Text>
                             </div>
                         </Col>
                         <Col data-aos="zoom-out-up" xs={12} sm={12} md={4} lg={4} xl={4} xxl={4}>

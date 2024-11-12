@@ -34,15 +34,15 @@ const SecHomeAbout = () => {
     <>
       <section className="sec-about">
         <Container className='bg-elem'>
-          <Row className='justify-content-center align-items-center'>
-            <Col data-aos="fade-up" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
+          <Row className='justify-content-center align-items-end'>
+            <Col data-aos="fade-right" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
               <div className="img-box">
                 <Image src={aboutImage} />
               </div>
             </Col >
-            <Col data-aos="fade-down" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
+            <Col data-aos="fade-left" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
               <div className="desc">
-                <Text as="h2">What to Expect</Text>
+                <Text as="h2">Features You’ll Love</Text>
                 <Row>
                   <HomeAboutBox aboutData={homeAbout}/>
                 </Row>

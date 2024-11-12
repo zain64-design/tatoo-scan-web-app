@@ -6,8 +6,7 @@ import RouteLoader from './components/Loader/RouteLoader'
 import { SkeletonTheme } from 'react-loading-skeleton';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
-const Services = lazy(() => import('./pages/Services'));
-const Blogs = lazy(() => import('./pages/Blogs'));
+const Features = lazy(() => import('./pages/Features'));
 const BlogDetails = lazy(() => import('./pages/BlogDetails'));
 const Contact = lazy(() => import('./pages/Contact'));
 
@@ -30,8 +29,7 @@ const router = createBrowserRouter([
     children: [
       { path: '', element: <Home /> },
       { path: 'about-us', element: <About /> },
-      { path: 'services', element: <Services /> },
-      { path: 'blogs', element: <Blogs /> },
+      { path: 'features', element: <Features /> },
       { path: 'blog-detail/:id', element: <BlogDetails /> },
       { path: 'contact', element: <Contact /> },
     ],

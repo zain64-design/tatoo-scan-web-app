@@ -13,14 +13,14 @@ const SecHomeBanner = () => {
     <section className="sec-home-banner">
       <Container className="bg-elem">
         <Row className="justify-content-center justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-between justify-content-xl-between justify-content-xxl-between">
-          <Col data-aos="fade-up" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
+          <Col data-aos="fade-right" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
             <div className="desc">
-              <Text as='h1'>Unlock the <Text as='span'>Story</Text> Behind <Text as='span'>Your Ink</Text> </Text>
-              <Text as="p">With Tattooscan, your tattoos are more than just body art. Our revolutionary tattoo app allows you to scan tattoos and connect them with personalized multimedia content like videos, audio, and detailed information about your Tattoo storytelling. Whether it’s a cherished memory, a message from the artist, or a deeper meaning, Tattooscan brings your tattoos to life.</Text>
+              <Text as='h1'>Revolutionizing the  <Text as='span'>Tattoo Experience</Text></Text>
+              <Text as="p">Tattooscan transforms the traditional concept of tattoos from static images into dynamic, interactive experiences. By seamlessly integrating your tattoos with personalized multimedia content, Tattooscan allows you to capture and relive the stories behind your ink like never before. Whether it’s a cherished memory, a meaningful message, or a unique piece of art, Tattooscan connects you to your tattoos in a deeper, more engaging way.</Text>
               <AppBtn/>
             </div>
           </Col>
-          <Col data-aos="fade-down" xs={12} sm={9} md={8} lg={5} xl={5} xxl={5}>
+          <Col data-aos="fade-left" xs={12} sm={9} md={8} lg={5} xl={5} xxl={5}>
           <ImageParallax/>
           </Col>
         </Row>

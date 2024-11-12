@@ -67,7 +67,7 @@
                 @include smHeading(capitalize,clamp(6px,1vw,12px));
             }
             p {
-                @include paraTwo(0,capitalize)
+                @include paraTwo(0,unset)
             }
         }
     }

@@ -27,7 +27,6 @@ const FooterLinks = () => {
             title: 'Product',
             links: [
                 { title: 'Take Tour', path: '/' },
-                { title: 'Live Chat', path: '/' },
                 { title: 'Reviews', path: '/' },
             ],
         },

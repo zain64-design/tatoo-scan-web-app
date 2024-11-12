@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "title": "Interactive Tattoo Scanning",
+        "thumbnail": "/images/services/ser-1.webp",
+        "icon": "/images/services/ser-icon-1.png",
+        "desc": "Unlock a new dimension to your tattoos by associating them with personalized tattoo content. Simply scan your tattoo with the tattoo app to access videos, images and audio messages, Relive cherished memories, share the story behind your ink, and connect with your tattoos like never before."
+    },
+    {
+        "id":2,
+        "title": "Explore Artists and Tattoo Inspiration",
+        "thumbnail": "/images/services/ser-2.webp",
+        "icon": "/images/services/ser-icon-2.png",
+        "desc": "Dive into a world of tattoo artistry with Tattooscan. Browse through diverse portfolios and a gallery of tattoo designs from artists worldwide, whether you're searching for your next tattoo or exploring for fun. Discover unique styles, stay inspired, and connect with artists who match your vision. For artists, Tattooscan provides a space to showcase their work, reach new clients, and create a visual journey that tells their story."
+    },
+    {
+        "id":3,
+        "title": "Your Tattoo’s Story",
+        "thumbnail": "/images/services/ser-3.webp",
+        "icon": "/images/services/ser-icon-3.png",
+        "desc": "Bring your tattoos to life with personal content—such as video memories, photos, or voice notes—that captures each tattoo’s unique meaning. Add details like artist name, studio, and style to create a complete profile for each piece. Choose to share your stories with friends, family, and the tattoo community or keep them private—the choice is yours"
+    },
+    {
+        "id":4,
+        "title": "Community Connection",
+        "thumbnail": "/images/services/ser-4.webp",
+        "icon": "/images/services/ser-icon-4.png",
+        "desc": "Join a vibrant tattoo community of tattoo enthusiasts and artists. Share tattoo stories, discover new trends, and participate in discussions with like-minded individuals. Stay connected with events, conventions, and the latest in the world of tattoos."
+    },
+    {
+        "id":5,
+        "title": "Instant Tattoo Memories",
+        "thumbnail": "/images/services/ser-5.webp",
+        "icon": "/images/services/ser-icon-5.png",
+        "desc": "Capture moments on the fly by adding a video or photo to any tattoo—even if it doesn't have a deeper meaning. With Tattooscan, you can update any piece in your collection with snapshots from your day, personal highlights, or spontaneous memories. Whether your tattoo is a symbol, a spur-of-the-moment design, or just an aesthetic choice, Tattooscan lets you continually evolve your collection with fresh, personal content that’s meaningful to you."
+    },
+    {
+        "id":6,
+        "title": "Join the Tattoo Community",
+        "thumbnail": "/images/services/ser-6.webp",
+        "icon": "/images/services/ser-icon-6.png",
+        "desc": "Discover trends, share your stories, and talk about everything tattoo-related with people who get it. This way you can stay in the loop on events, conventions, and the latest buzz in the tattoo world."
+    }
+]

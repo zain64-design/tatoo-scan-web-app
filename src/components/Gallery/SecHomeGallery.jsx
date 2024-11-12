@@ -35,11 +35,11 @@ const SecHomeGallery = () => {
                     <div className="head-area">
                         <Row>
                             <Col data-aos="fade-right" xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
-                                <Text as="h4">Experience the magic of memory and artistry combined</Text>
+                                <Text as="h4">Experience Tattoos Like Never Before</Text>
                                 <Text as="h6">Your skin, your stories, your way!"</Text>
                             </Col>
                             <Col data-aos="fade-left" xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
-                                <Text as="p">Join a vibrant community of tattoo enthusiasts, artists, and studios. Share your tattoo stories, discover new artists, and stay updated on tattoo events and trends.</Text>
+                                <Text as="p">With Tattooscan, every tattoo has a story waiting to be told. Whether you’re a tattoo enthusiast looking to add meaning to your ink or an artist seeking to connect with your clients, Tattooscan offers a platform that transforms the tattoo experience. Download the app today and unlock the true potential of your tattoos.</Text>
                             </Col>
                         </Row>
                     </div>

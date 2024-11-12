@@ -14,13 +14,9 @@ const Links = () => {
             path: '/about-us'
         },
         {
-            title: 'services',
-            path: '/services'
-        },
-        {
-            title: 'blogs',
-            path: '/blogs'
-        },
+            title: 'features',
+            path: '/features'
+        }
     ]
 
     return (

@@ -4,13 +4,13 @@ import useBackgroundImage from '../../utils/hooks/useBackgroundImage';
 import Text from '../UI/Text';
 import Image from '../UI/Image';
 
-const ServicesCard = ({ servicesData }) => {
+const FeaturesCard = ({ featuresData }) => {
 
-    useBackgroundImage('[data-bg-image]', servicesData);
+    useBackgroundImage('[data-bg-image]', featuresData);
 
     return (
         <>
-            {servicesData?.map(((value) => {
+            {featuresData?.map(((value) => {
                 const { id, title, thumbnail, icon, desc } = value;
                 return (
                     <div className='service-card' data-bg-image={thumbnail} key={id}>
@@ -32,4 +32,4 @@ const ServicesCard = ({ servicesData }) => {
     )
 }
 
-export default ServicesCard
+export default FeaturesCard

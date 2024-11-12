@@ -23,7 +23,7 @@
             @include xlHeading(unset,30px);
         }
         p {
-            @include paraTwo(0 0 7px 0,capitalize)
+            @include paraTwo(0 0 7px 0,unset)
         }
         .btn-contact {
             @include buttonOne(clamp(45px,5vw,57px),clamp(180px,14vw,217px),$font-4,clamp(16px, 1vw, 20px),40px 0 0 0);

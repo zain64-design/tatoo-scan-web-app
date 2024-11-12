@@ -22,7 +22,7 @@
         }
     }
     .desc {
-        padding: 20px 0;
+        padding: 0;
         .icon {
             margin: 0 auto 20px;
             display: block;
@@ -34,7 +34,7 @@
             @include xsHeading(clamp(22px,3vw,32px),clamp(32px,4vw,36px),clamp(10px,1.5vw,16px));
         }
         p {
-            @include paraThree(0,$white-clr,clamp(14px, 1.5vw, 16px),clamp(24px, 2vw, 28px), capitalize,-0.1px)
+            @include paraThree(0,$white-clr,clamp(14px, 1.5vw, 16px),clamp(24px, 2vw, 28px), unset,-0.1px)
         }
     }
 }

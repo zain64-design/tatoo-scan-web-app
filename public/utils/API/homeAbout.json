@@ -2,19 +2,25 @@
     {
         "id": 1,
         "image": "images/home/abt-icon-1.png",
-        "head": "Interactive Tattoo Experience",
-        "desc": "Simply scan your tattoo to unlock and play associated content."
+        "head": "Interactive Tattoo Scanning",
+        "desc": "Scan your tattoo to unlock and view personalized content."
     },
     {
         "id": 2,
         "image": "images/home/abt-icon-2.png",
-        "head": "Tattoo Artist Discovery",
-        "desc": "Explore portfolios and connect with talented tattoo artists and studios."
+        "head": "Discover Artists",
+        "desc": "Browse portfolios and connect with talented tattoo artists and studios."
     },
     {
         "id": 3,
         "image": "images/home/abt-icon-3.png",
-        "head": "Tattoo Community Connection",
-        "desc": "Share tattoo stories and connect with others in the tattoo community."
+        "head": "Tattoo Galleries",
+        "desc": "Explore galleries full of unique designs and find inspiration for your next tattoo."
+    },
+    {
+        "id": 4,
+        "image": "images/home/abt-icon-4.png",
+        "head": "Community Connection",
+        "desc": "Share your tattoo stories and connect with others in the tattoo community."
     }
 ]
