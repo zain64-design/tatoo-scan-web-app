@@ -27,7 +27,7 @@ footer {
 
         .categ-main {
             h6 {
-                font-family: $font-4;
+                font-family: $font-11;
                 color: $white-clr;
                 font-size: clamp(16px, 2vw, 24px);
                 font-weight: 500;
@@ -48,7 +48,7 @@ footer {
                     }
 
                     a {
-                        font-family: $font-2;
+                        font-family: $font-7;
                         color: $white-clr;
                         font-size: clamp(14px, 1.5vw, 16px);
                         font-weight: 400;
@@ -72,7 +72,7 @@ footer {
 
         .support-area {
             h6 {
-                font-family: $font-4;
+                font-family: $font-11;
                 color: $white-clr;
                 font-size: clamp(16px, 2vw, 24px);
                 font-weight: 500;
@@ -86,7 +86,7 @@ footer {
                     padding: 8px 0;
 
                     a {
-                        font-family: $font-2;
+                        font-family: $font-7;
                         color: $white-clr;
                         font-size: clamp(14px, 1.5vw, 16px);
                         font-weight: 400;
@@ -133,7 +133,7 @@ footer {
                     color: #fff;
                     height: clamp(36px, 5vw, 46px);
                     width: clamp(100px, 14vw, 123px);
-                    font-family: $font-4;
+                    font-family: $font-7;
                     font-size: clamp(10px, 1.5vw, 13px);
                     text-transform: capitalize;
                     margin: 0;
@@ -175,7 +175,7 @@ footer {
 
     .left-area p,
     .left-area p a {
-        font-family: $font-4;
+        font-family: $font-7;
         color: $lt-grey-clr-2;
         font-size: clamp(14px, 2vw, 16px);
         text-transform: capitalize;

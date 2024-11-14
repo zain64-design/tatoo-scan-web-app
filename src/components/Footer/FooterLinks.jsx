@@ -11,8 +11,7 @@ const FooterLinks = () => {
             links: [
                 { title: 'Home', path: '/' },
                 { title: 'About Us', path: '/about-us' },
-                { title: 'Services', path: '/services' },
-                { title: 'Blog', path: '/blogs' },
+                { title: 'Features', path: '/features' },
             ],
         },
         {

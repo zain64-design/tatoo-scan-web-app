@@ -2,7 +2,7 @@
 @use './variables.scss' as *;
 
 @mixin xxlHeading($font-size, $text-transform, $line-height, $margin-bottom, $letter-spacing) {
-    font-family: $font-6;
+    font-family: $font-13;
     font-size: $font-size;
     text-transform: $text-transform;
     line-height: $line-height;
@@ -12,7 +12,7 @@
 }
 
 @mixin xlHeading($text-transform, $margin-bottom) {
-    font-family: $font-5;
+    font-family: $font-11;
     font-size: clamp(24px, 4vw, 48px);
     text-transform: $text-transform;
     line-height: clamp(30px, 5vw, 52px);
@@ -21,7 +21,7 @@
 }
 
 @mixin smHeading($text-transform, $margin-bottom) {
-    font-family: $font-5;
+    font-family: $font-11;
     font-size: clamp(16px, 1vw, 18px);
     text-transform: $text-transform;
     line-height: normal;
@@ -30,7 +30,7 @@
 }
 
 @mixin xsHeading($font-size, $line-height, $margin-bottom) {
-    font-family: $font-5;
+    font-family: $font-11;
     font-size: $font-size;
     text-transform: capitalize;
     line-height: $line-height;
@@ -40,7 +40,7 @@
 }
 
 @mixin subHeading($font-size, $margin-bottom, $text-transform, $letter-spacing) {
-    font-family: $font-4;
+    font-family: $font-9;
     font-size: $font-size;
     line-height: normal;
     margin-bottom: $margin-bottom;
@@ -50,7 +50,7 @@
 }
 
 @mixin subHeadingTwo($font-size, $margin-bottom, $text-transform) {
-    font-family: $font-3;
+    font-family: $font-7;
     font-size: $font-size;
     line-height: normal;
     margin-bottom: $margin-bottom;
@@ -59,7 +59,7 @@
 }
 
 @mixin rgHeading($font-size, $text-transform, $line-height, $margin-bottom) {
-    font-family: $font-3;
+    font-family: $font-7;
     font-size: $font-size;
     text-transform: $text-transform;
     line-height: $line-height;
@@ -69,7 +69,7 @@
 }
 
 @mixin blogHeading($margin) {
-    font-family: $font-6;
+    font-family: $font-13;
     font-size: clamp(16px, 2vw, 24px);
     text-transform: capitalize;
     line-height: normal;
@@ -78,7 +78,7 @@
 }
 
 @mixin commentHeading($margin) {
-    font-family: $font-3;
+    font-family: $font-7;
     font-size: clamp(16px, 1vw, 18px);
     text-transform: capitalize;
     line-height: normal;
@@ -87,7 +87,7 @@
 }
 
 @mixin dateHeading($margin) {
-    font-family: $font-6;
+    font-family: $font-13;
     font-size: clamp(22px, 3vw, 36px);
     text-transform: capitalize;
     line-height: normal;
@@ -105,18 +105,8 @@
     text-align: center;
 }
 
-@mixin servicesHeading($font-family, $margin-bottom) {
-    font-family: $font-family;
-    font-size: clamp(22px, 4vw, 40px);
-    text-transform: capitalize;
-    line-height: normal;
-    color: $white-clr;
-    margin-bottom: $margin-bottom;
-    text-align: center;
-}
-
 @mixin serCardHead($margin-bottom, $text-align) {
-    font-family: $font-5;
+    font-family: $font-11;
     font-size: clamp(18px, 3vw, 23px);
     text-transform: capitalize;
     line-height: clamp(24px, 3.5vw, 28px);
@@ -135,9 +125,9 @@
 }
 
 @mixin paraTwo($margin, $text-transform) {
-    font-family: $font-4;
+    font-family: $font-7;
     font-size: clamp(14px, 1.5vw, 18px);
-    line-height: clamp(24px, 3vw, 36px);
+    line-height: clamp(24px, 3vw, 30px);
     margin: $margin;
     color: $lt-grey-clr;
     text-transform: $text-transform;
@@ -145,7 +135,7 @@
 }
 
 @mixin paraThree($margin, $color, $font-size, $line-height, $text-transform, $letter-spacing) {
-    font-family: $font-3;
+    font-family: $font-7;
     font-size: $font-size;
     line-height: $line-height;
     margin: $margin;
@@ -266,7 +256,7 @@
 }
 
 @mixin bannerHead($margin-bottom) {
-    font-family: $font-6;
+    font-family: $font-13;
     font-size: clamp(24px, 5vw, 64px);
     text-transform: capitalize;
     line-height: clamp(30px, 6vw, 72px);
@@ -276,7 +266,7 @@
 }
 
 @mixin bannerPara($margin-top, $margin-bottom, $text-align) {
-    font-family: $font-3;
+    font-family: $font-7;
     font-size: clamp(12px, 1.5vw, 18px);
     line-height: clamp(20px, 3vw, 36px);
     margin-top: $margin-top;

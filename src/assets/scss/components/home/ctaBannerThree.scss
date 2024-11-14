@@ -53,7 +53,7 @@
             @include xxlHeading(clamp(22px,4vw,42px),capitalize,clamp(28px,4.2vw,48px),clamp(8px,1vw,16px),normal)
         }
         p {
-            @include paraOne($font-3,0,$white-clr,unset);
+            @include paraOne($font-7,0,$white-clr,unset);
         }
     }
     .btn-flex {
