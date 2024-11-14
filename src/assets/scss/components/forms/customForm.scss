@@ -121,6 +121,6 @@
         }
     }
     .submit-btn {
-        @include buttonOne(clamp(45px,5vw,58px),100%,$font-4,clamp(16px, 1vw, 20px),12px 0 0 0);
+        @include buttonOne(clamp(45px,5vw,58px),100%,$font-9,clamp(16px, 1vw, 20px),12px 0 0 0);
     }
 }

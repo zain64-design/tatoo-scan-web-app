@@ -17,7 +17,7 @@ header {
 				.nav-item {
 					.nav-link {
 						color: $white-clr;
-						font-family: $font-4;
+						font-family: $font-7;
 						font-size: clamp(14px,1.2vw,18px);
 						text-transform: capitalize;
 						padding: 0;
@@ -30,7 +30,7 @@ header {
 							color: $prim-clr;
 						}
 						&.active {
-							font-family: $font-6;
+							font-family: $font-13;
 							color: $prim-clr;
 						}
 					}
@@ -84,7 +84,7 @@ header {
 					margin: 0;
 				}
 				.login {
-					@include buttonOne(clamp(45px,5vw,57px),clamp(180px,14vw,205px),$font-4,clamp(16px, 1.5vw, 20px),0);
+					@include buttonOne(clamp(45px,5vw,57px),clamp(180px,14vw,205px),$font-9,clamp(16px, 1.5vw, 20px),0);
 				}
 			}
 		}

@@ -58,6 +58,8 @@
             }
             p {
                 @include bannerPara(0,0,left);
+                color: $lt-grey-clr;
+                opacity: 1;
             }
         }
     }

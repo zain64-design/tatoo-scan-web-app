@@ -49,7 +49,7 @@ footer {
 
                     a {
                         font-family: $font-7;
-                        color: $white-clr;
+                        color: $lt-grey-clr;
                         font-size: clamp(14px, 1.5vw, 16px);
                         font-weight: 400;
                         text-transform: capitalize;
@@ -87,7 +87,7 @@ footer {
 
                     a {
                         font-family: $font-7;
-                        color: $white-clr;
+                        color: $lt-grey-clr;
                         font-size: clamp(14px, 1.5vw, 16px);
                         font-weight: 400;
                         text-transform: capitalize;
@@ -176,7 +176,7 @@ footer {
     .left-area p,
     .left-area p a {
         font-family: $font-7;
-        color: $lt-grey-clr-2;
+        color: $lt-grey-clr;
         font-size: clamp(14px, 2vw, 16px);
         text-transform: capitalize;
         transition: all 0.3s ease-in-out;

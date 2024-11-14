@@ -43,10 +43,10 @@
                 @include serCardHead(clamp(12px, 2.5vw, 24px),left);
             }
             p {
-                @include paraThree(0,$lt-grey-clr-5,clamp(14px, 1.5vw, 16px),clamp(24px, 3vw, 36px),unset,-0.1px)
+                @include paraThree(0,$lt-grey-clr,clamp(14px, 1.5vw, 16px),clamp(24px, 3vw, 30px),unset,-0.1px)
             }
             .btn-contact {
-                @include buttonOne(clamp(45px,5vw,57px),clamp(180px,14vw,217px),$font-4,clamp(16px, 1vw, 20px),40px 0 0 0);
+                @include buttonOne(clamp(45px,5vw,57px),clamp(180px,14vw,217px),$font-9,clamp(16px, 1vw, 20px),40px 0 0 0);
                 svg {
                     font-size: clamp(14px,1.5vw,21px);
                     position: absolute;
