@@ -18,8 +18,6 @@ export const getStateData = (slug, key = null) => {
 };
 
 export const getApiContents = async (slug, keysIn, keysNotIn) => {
-    const data = await fetchData(`https://phaseprintdesignmaker.com/api/check-server`);
-    console.log('ip data', data);
     const aboutData = await fetchData(`${API_ENDPOINT}/getContents`, { slug, keysIn, keysNotIn });
     if(aboutData?.data?.contents)
         var result = aboutData.data.contents.reduce((acc, item) => {
