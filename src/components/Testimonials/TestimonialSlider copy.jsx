@@ -8,10 +8,6 @@ import SliderNextArrow from "./SliderNextArrow";
 
 
 const TestimonialSlider = ({ testimonialData }) => {
-
-    console.log(testimonialData);
-
-
     const [singleImg, setSingleImg] = useState(null);
     const [multiImg, setMultiImg] = useState(null);
 

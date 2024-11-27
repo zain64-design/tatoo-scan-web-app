@@ -5,7 +5,7 @@ import { useFormik } from 'formik';
 import { MdError } from "react-icons/md";
 import '../../assets/scss/components/forms/customForm.scss';
 
-const CustomForm = ({ fields, onSubmit, validationSchema, buttonText }) => {
+const CustomForm = ({ fields, onSubmit, validationSchema, buttonText, isSubmitted=false }) => {
 
     const id = useId();
 
@@ -58,9 +58,11 @@ const CustomForm = ({ fields, onSubmit, validationSchema, buttonText }) => {
                                         />
                                     )}
                                     {formik.touched[field.name] && formik.errors[field.name] ? <small>{formik.errors[field.name]}<MdError /></small> : null}
+
                                 </div>
                             </Col>
                         ))}
+                        {isSubmitted && (<small className='submit-success'>Submitted Successfully</small>)}
                         <Col>
                             <div className="input-field">
                                 <button type="submit" className="btn submit-btn hvr-bounce-to-right">{buttonText}</button>

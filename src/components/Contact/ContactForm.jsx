@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as Yup from 'yup';
 import CustomForm from '../CustomForm/CustomForm';
+import { makeRequest } from '../../utils/helper';
 
 const ContactForm = () => {
-
     const fields = [
         {
             label: 'Your Name',
@@ -28,9 +28,19 @@ const ContactForm = () => {
             rows: 7
         }
     ]
+    const [isSubmitted, setIsSubmitted] = useState(false);
+    const onSubmit = async (values, { resetForm }) => {
+        await makeRequest({
+            method: 'POST',
+            url: '/inquiry',
+            data: values
+        });
 
-    const onSubmit = values => {
-        console.log('Submitting form', values);
+        resetForm();
+        setIsSubmitted(true);
+        setTimeout(() => {
+            setIsSubmitted(false);
+        }, 3000);
     }
 
     const validationSchema = Yup.object({
@@ -41,7 +51,7 @@ const ContactForm = () => {
 
     return (
         <>
-        <CustomForm fields={fields} onSubmit={onSubmit} validationSchema={validationSchema} buttonText='contact us'/>
+        <CustomForm fields={fields} onSubmit={onSubmit} validationSchema={validationSchema} buttonText='contact us' isSubmitted={isSubmitted}/>
         </>
     )
 }
