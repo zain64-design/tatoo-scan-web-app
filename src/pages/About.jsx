@@ -6,6 +6,7 @@ import { API_ENDPOINT } from '../utils/constant';
 import { useDispatch, useSelector } from 'react-redux';
 import { setData } from '../redux/features/contentSlice';
 import { getApiContents, getStateData } from '../utils/helper';
+import RouteLoader from '../components/Loader/RouteLoader';
 
 const About = () => {
   const dispatch = useDispatch();
@@ -33,6 +34,7 @@ const About = () => {
     getContents();
   }, []);
 
+  
   useEffect(() => {
     setBannerInfo({
       ...bannerInfo,
@@ -41,6 +43,8 @@ const About = () => {
       paragraph: aboutData?.about?.section_1_desc,
     })
   }, [apiState])
+
+  if (!apiState) return <RouteLoader />;
 
   return (
     <>

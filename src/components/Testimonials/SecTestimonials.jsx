@@ -3,31 +3,31 @@ import { Col, Container, Row } from 'react-bootstrap'
 import TestimonialHead from './TestimonialHead'
 import TestimonialSlider from './TestimonialSlider'
 import '../../assets/scss/components/testimonial/secTestimonial.scss'
-import CircleLoader from '../Loader/CircleLoader';
-import { useQuery } from '@tanstack/react-query';
-import fetchData from '../../utils/hooks/fetchData';
-import { TESTIMONIAL_API } from '../../utils/constant';
+// import CircleLoader from '../Loader/CircleLoader';
+// import { useQuery } from '@tanstack/react-query';
+// import fetchData from '../../utils/hooks/fetchData';
+// import { TESTIMONIAL_API } from '../../utils/constant';
 import useAOS from '../../utils/hooks/useAOS';
 import { useSelector } from 'react-redux'
 
-const useFetchData = (key, url) => {
-    return useQuery({
-      queryKey: key,
-      queryFn: () => fetchData(url)
-    });
-  };
+// const useFetchData = (key, url) => {
+//     return useQuery({
+//       queryKey: key,
+//       queryFn: () => fetchData(url)
+//     });
+//   };
 
 const SecTestimonials = () => {
     const homeData = useSelector(state => state.cmsContent)?.home;
-    const {data:testimonial,isLoading,isError,error} = useFetchData(['testimonial'],TESTIMONIAL_API);
-    console.log('homeData', homeData);
+    // const {data:testimonial,isLoading,isError,error} = useFetchData(['testimonial'],TESTIMONIAL_API);
+    // console.log('homeData', homeData);
     useAOS();
 
-    if(isLoading) return <CircleLoader/>
+    // if(isLoading) return <CircleLoader/>
   
-    if (isError) {
-        return <Text as="h3" className='error-message'>Fetching Testimonials: {error.message}</Text>
-    }
+    // if (isError) {
+    //     return <Text as="h3" className='error-message'>Fetching Testimonials: {error.message}</Text>
+    // }
     
     const [headData, setHeadData] = useState({
         subHead: 'testimonial',

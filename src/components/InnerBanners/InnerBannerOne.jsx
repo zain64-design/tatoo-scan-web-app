@@ -4,11 +4,10 @@ import useBackgroundImage from '../../utils/hooks/useBackgroundImage';
 import Text from '../UI/Text';
 import '../../assets/scss/components/InnerBanner/innerBannerOne.scss'
 import AuthArea from '../Blogs/AuthArea';
+import useAOS from '../../utils/hooks/useAOS';
 
 const InnerBannerOne = ({ BannerTitle, backgroundImage, paragraph,blogTitle,authName,authImg }) => {
-
     // useBackgroundImage('data-bg-image');
-
     return (
         <>
             <section className="sec-inner-banner" data-bg-image={backgroundImage}>

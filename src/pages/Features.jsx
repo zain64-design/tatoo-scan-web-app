@@ -4,6 +4,7 @@ import SecFeatures from '../components/Features/SecFeatures';
 import { setData } from '../redux/features/contentSlice';
 import { getApiContents } from '../utils/helper';
 import { useDispatch, useSelector } from 'react-redux';
+import RouteLoader from '../components/Loader/RouteLoader';
 
 const Services = () => {
   const dispatch = useDispatch();
@@ -39,6 +40,8 @@ const Services = () => {
       paragraph: featureData?.section_1_desc,
     })
   }, [apiState])
+
+  if (!apiState) return <RouteLoader />;
 
   return (
     <>

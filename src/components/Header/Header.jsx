@@ -9,10 +9,11 @@ import useHandleScroll from '../../utils/hooks/useHandleScroll';
 import Links from './Links';
 import { RxHamburgerMenu } from "react-icons/rx";
 import useToggleBg from '../../utils/hooks/useToggleBg';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
+    const configData = useSelector(state => state.cmsContent)?.config;
     const scrolled = useHandleScroll();
-
     const [isToggled,handleToggleClick] = useToggleBg(null);
 
     return (
@@ -21,7 +22,7 @@ const Header = () => {
                 <Navbar expand="lg" className="bg-body-tertiary">
                     <Container>
                         <NavLink className='navbar-brand' to="/">
-                            <Image src={logo} className="logo" alt="logo" />
+                            <Image src={configData?.logo_image} className="logo" alt="logo" />
                         </NavLink>
                         <Navbar.Toggle onClick={handleToggleClick}>
                             <RxHamburgerMenu />
