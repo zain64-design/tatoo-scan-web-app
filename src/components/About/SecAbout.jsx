@@ -23,7 +23,7 @@ const SecAbout = () => {
     useBackgroundImage('[data-bg-image]',aboutData);
     if (isError) {
         return <Text as="h3" className='error-message'>Fetching about details: {error.message}</Text>
-    }
+    } 
 
     return (
         <>
