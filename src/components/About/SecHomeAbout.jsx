@@ -10,6 +10,7 @@ import fetchData from '../../utils/hooks/fetchData';
 import CircleLoader from '../Loader/CircleLoader';
 import '../../assets/scss/components/home/homeAbout.scss';
 import useAOS from '../../utils/hooks/useAOS';
+import { useSelector } from 'react-redux';
 
 const useFetchData = (key, url) => {
   return useQuery({
@@ -19,10 +20,10 @@ const useFetchData = (key, url) => {
 };
 
 const SecHomeAbout = () => {
-
+  const homeData = useSelector(state => state.cmsContent)?.home;
   const {data:homeAbout,isLoading,isError,error} = useFetchData(['homeAbout'],HOME_ABOUT_API);
 
-  useAOS();
+  useAOS(homeData);
 
   if(isLoading) return <CircleLoader/>
 
@@ -37,14 +38,14 @@ const SecHomeAbout = () => {
           <Row className='justify-content-center align-items-end'>
             <Col data-aos="fade-right" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
               <div className="img-box">
-                <Image src={aboutImage} />
+                <Image src={homeData?.section_2_leftside_image} />
               </div>
             </Col >
             <Col data-aos="fade-left" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
               <div className="desc">
-                <Text as="h2">Features You’ll Love</Text>
+                <Text as="h2">{homeData?.section_2_title}</Text>
                 <Row>
-                  <HomeAboutBox aboutData={homeAbout}/>
+                  <HomeAboutBox aboutData={homeData?.section_2_feature_list}/>
                 </Row>
               </div>
             </Col>

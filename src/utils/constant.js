@@ -8,3 +8,4 @@ export const ABOUT_TEAM_SLIDER_API = import.meta.env.VITE_APP_API_ABOUT_TEAM_SLI
 export const ABOUT_DESC_API = import.meta.env.VITE_APP_API_ABOUT_DESC
 export const REWARDS_API = import.meta.env.VITE_APP_API_REWARDS
 export const TESTIMONIAL_API = import.meta.env.VITE_APP_API_TESTIMONIAL
+export const API_ENDPOINT = import.meta.env.VITE_APP_API_ENDPOINT

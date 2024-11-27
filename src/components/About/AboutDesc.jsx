@@ -2,12 +2,7 @@ import React from 'react'
 import Text from '../UI/Text'
 
 const AboutDesc = ({ desc }) => {
-  // const descData = value[0].desc;
   const descData = desc;
-  console.log(descData);
-
-
-
   return (
     <>
       {descData?.map((value) => {

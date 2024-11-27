@@ -6,19 +6,21 @@ import '../../assets/scss/components/home/ctaBannerTwo.scss'
 import { NavLink } from 'react-router-dom';
 import { HiOutlineArrowRight } from "react-icons/hi";
 import useAOS from '../../utils/hooks/useAOS';
+import { useSelector } from 'react-redux';
 
 const CTABannerTwo = () => {
-    useBackgroundImage('[data-bg-image]');
+    const homeData = useSelector(state => state.cmsContent)?.home;
+    useBackgroundImage('[data-bg-image]', homeData);
     useAOS();
     return (
         <>
-            <section data-aos="fade-in" className='sec-cta-two' data-bg-image="/images/home/cta-bg1.jpg">
+            <section data-aos="fade-in" className='sec-cta-two' data-bg-image={homeData?.section_5_bg_image}>
                 <Container>
                     <Row>
                         <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={6}>
                             <div className="desc">
-                                <Text as="h4">Transforming Tattoo Stories into Living Memories</Text>
-                                <Text as="p">With Tattooscan, tattoos evolve from static ink to interactive experiences. Seamlessly link each tattoo to personal multimedia, bringing out the unique stories, memories, and meanings behind every design. Share your journey with others and connect on a deeper level within the tattoo community, where each piece of art can inspire, engage, and unite.</Text>
+                                <Text as="h4">{homeData?.section_5_title}</Text>
+                                <Text as="p">{homeData?.section_5_desc}</Text>
                                 <NavLink to='/contact' className='btn btn-contact'>contact us 
                                 <HiOutlineArrowRight />
                                 </NavLink>

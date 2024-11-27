@@ -6,8 +6,11 @@ import logo from '/images/logo-header.png';
 import '../../assets/scss/layout/footer.scss'
 import Text from '../UI/Text'
 import FooterLinks from './FooterLinks';
+import { useSelector } from 'react-redux';
 
 const Footer = () => {
+  const configData = useSelector(state => state.cmsContent)?.config;
+
   return (
     <footer>
       <div className="footer-main">
@@ -15,8 +18,8 @@ const Footer = () => {
           <Row className="justify-content-center">
             <Col xs={12} sm={12} md={4} lg={3} xl={3} xxl={3}>
               <div className="footer-about">
-                <Image src={logo} className='thumb' alt='footer logo' />
-                <Text as='p'>Scan tattoos to unlock videos, audio messages, and detailed stories behind your ink. Share tattoo stories, meaning and emotion tied to your tattoos with friends, family, and the world.</Text>
+                <Image src={configData?.logo_image} className='thumb' alt='footer logo' />
+                <Text as='p'>{configData?.footer_desc}</Text>
               </div>
             </Col>
             <Col xs={12} sm={8} md={8} lg={8} xl={8} xxl={8} className='mt-4 mt-sm-4 mt-md-0 mt-lg-0 mt-xl-0 mt-xxl-0'>
@@ -26,7 +29,7 @@ const Footer = () => {
                   <div className="support-area">
                     <Text as="h6">Contact Us</Text>
                     <ul>
-                      <li><a href="mailto:help@email.com" className="icon icon-mail">help@email.com</a></li>
+                      <li><a href={`mailto:${configData?.email_address}`} className="icon icon-mail">{configData?.email_address}</a></li>
                       {/* <li><a href="tel:+123445667889" className="icon icon-phone">+1 234 456 678 89</a></li> */}
                     </ul>
                   </div>
@@ -42,7 +45,7 @@ const Footer = () => {
             <Col xxl={12}>
               <div className="left-area">
                 <Text as="p">
-                  <NavLink to="/">Copyright 2024 TattooScan</NavLink> all rights reserved.
+                    {configData?.footer_copyright}
                 </Text>
               </div>
             </Col>

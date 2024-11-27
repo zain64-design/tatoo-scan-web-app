@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Card } from 'react-bootstrap'
 import { HiOutlinePhone } from "react-icons/hi2";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import { HiOutlineMapPin } from "react-icons/hi2";
 import Text from '../UI/Text';
+import { useSelector } from 'react-redux';
 
 const contactInfo = [
     {
@@ -27,6 +28,13 @@ const contactInfo = [
 ];
 
 const InfoBox = () => {
+    const configData = useSelector(state => state.cmsContent).config;
+    useEffect(()=>{
+        contactInfo[0].value = configData?.phone_number;
+        contactInfo[1].value = configData?.email_address;
+        contactInfo[2].value = configData?.address;
+    }, [configData]);
+    
     return (
         <>
             {contactInfo?.map((data,index) => {

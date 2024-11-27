@@ -1,12 +1,12 @@
 import React from 'react'
 import useImageParallax from '../../utils/hooks/useImageParallax';
-import backOrnament from '/images/home/back-ornament.png';
-import phone1 from '/images/home/phone-1.png';
-import phone2 from '/images/home/phone-2.png';
+// import backOrnament from '/images/home/back-ornament.png';
+// import phone1 from '/images/home/phone-1.png';
+// import phone2 from '/images/home/phone-2.png';
 import '../../assets/scss/components/home/parallaxImg.scss'
 import Image from '../UI/Image'
 
-const ImageParallax = () => {
+const ImageParallax = ({ backOrnament, phone2, phone1 }) => {
     const sceneRef = useImageParallax();
     return (
         <>
