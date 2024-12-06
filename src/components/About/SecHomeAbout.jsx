@@ -23,7 +23,10 @@ const SecHomeAbout = () => {
   const homeData = useSelector(state => state.cmsContent)?.home;
   const {data:homeAbout,isLoading,isError,error} = useFetchData(['homeAbout'],HOME_ABOUT_API);
 
-  useAOS(homeData);
+  // useAOS(homeData);
+  useAOS({
+    offset: 200,
+  })
 
   if(isLoading) return <CircleLoader/>
 
