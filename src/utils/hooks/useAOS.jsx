@@ -7,8 +7,8 @@ import 'aos/dist/aos.css';
 const useAOS = (config = {}) => {
   useEffect(() => {
     const defaultConfig = {
-      delay: 300,
-      duration: 1000,
+      delay: 100,
+      duration: 800,
       easing: 'ease-in-out',
       ...config,
     };

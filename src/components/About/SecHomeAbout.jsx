@@ -24,9 +24,7 @@ const SecHomeAbout = () => {
   const {data:homeAbout,isLoading,isError,error} = useFetchData(['homeAbout'],HOME_ABOUT_API);
 
   // useAOS(homeData);
-  useAOS({
-    offset: 100,
-  })
+  useAOS()
 
   if(isLoading) return <CircleLoader/>
 
