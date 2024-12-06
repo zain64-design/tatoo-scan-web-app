@@ -25,7 +25,7 @@ const SecHomeAbout = () => {
 
   // useAOS(homeData);
   useAOS({
-    offset: 200,
+    offset: 50,
   })
 
   if(isLoading) return <CircleLoader/>
