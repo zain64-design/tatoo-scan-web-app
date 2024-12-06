@@ -38,7 +38,7 @@ const SecHomeAbout = () => {
         <Container className='bg-elem'>
           <Row className='justify-content-center align-items-end'>
             <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
-              <div data-aos="fade-right" className="img-box">
+              <div data-aos="fade-up" className="img-box">
                 <Image src={homeData?.section_2_leftside_image} />
               </div>
             </Col >
