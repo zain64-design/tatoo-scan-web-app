@@ -25,7 +25,7 @@ const SecHomeAbout = () => {
 
   // useAOS(homeData);
   useAOS({
-    offset: 50,
+    offset: 100,
   })
 
   if(isLoading) return <CircleLoader/>
@@ -39,13 +39,13 @@ const SecHomeAbout = () => {
       <section className="sec-about">
         <Container className='bg-elem'>
           <Row className='justify-content-center align-items-end'>
-            <Col data-aos="fade-right" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
-              <div className="img-box">
+            <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
+              <div data-aos="fade-right" className="img-box">
                 <Image src={homeData?.section_2_leftside_image} />
               </div>
             </Col >
-            <Col data-aos="fade-left" xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
-              <div className="desc">
+            <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
+              <div data-aos="fade-left" className="desc">
                 <Text as="h2">{homeData?.section_2_title}</Text>
                 <Row>
                   <HomeAboutBox aboutData={homeData?.section_2_feature_list}/>
