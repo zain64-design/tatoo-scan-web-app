@@ -24,7 +24,9 @@ const SecHomeAbout = () => {
   const {data:homeAbout,isLoading,isError,error} = useFetchData(['homeAbout'],HOME_ABOUT_API);
 
   // useAOS(homeData);
-  useAOS()
+  useAOS({
+    offset: 100,
+  })
 
   if(isLoading) return <CircleLoader/>
 
@@ -34,16 +36,16 @@ const SecHomeAbout = () => {
 
   return (
     <>
-      <section className="sec-about">
+      <section data-aos="fade-in" className="sec-about">
         <Container className='bg-elem'>
           <Row className='justify-content-center align-items-end'>
             <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
-              <div data-aos="fade-up" className="img-box">
+              <div className="img-box">
                 <Image src={homeData?.section_2_leftside_image} />
               </div>
             </Col >
             <Col xs={12} sm={12} md={12} lg={6} xl={6} xxl={5}>
-              <div data-aos="fade-left" className="desc">
+              <div className="desc">
                 <Text as="h2">{homeData?.section_2_title}</Text>
                 <Row>
                   <HomeAboutBox aboutData={homeData?.section_2_feature_list}/>
